@@ -4,6 +4,24 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>David Israel Moreno — Arquitecto de Software</title>
+
+<!-- Open Graph / LinkedIn / WhatsApp -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://davidisrael.dev/">
+<meta property="og:title" content="David Israel Moreno — Software Architect & Senior Full-Stack">
+<meta property="og:description" content="Diseño sistemas distribuidos, microservicios event-driven e integraciones de pago STP/SPEI. Monterrey, México. Disponible para roles remotos internacionales.">
+<meta property="og:image" content="https://davidisrael.dev/og-preview.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="es_MX">
+<meta property="og:site_name" content="David Israel Moreno">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="David Israel Moreno — Software Architect">
+<meta name="twitter:description" content="Senior Full-Stack & Arquitecto de Software. DDD, CQRS, microservicios, STP/SPEI. Monterrey, México.">
+<meta name="twitter:image" content="https://davidisrael.dev/og-preview.png">
+<meta name="description" content="David Israel Moreno Resendez — Arquitecto de Software y Senior Full-Stack Engineer en Monterrey, México. Especialista en sistemas distribuidos, DDD, CQRS, microservicios e integraciones STP/SPEI.">
+<meta name="author" content="David Israel Moreno Resendez">
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&family=DM+Serif+Display:ital@0;1&family=Syne:wght@400;700;800&display=swap" rel="stylesheet">
 <style>
@@ -16,14 +34,18 @@
 html{scroll-behavior:smooth}
 body{background:var(--paper);color:var(--ink);font-family:var(--mono);overflow-x:hidden;cursor:none}
 .grid-bg{position:fixed;inset:0;background-image:linear-gradient(var(--grid) 1px,transparent 1px),linear-gradient(90deg,var(--grid) 1px,transparent 1px);background-size:48px 48px;z-index:0;pointer-events:none}
-.noise{position:fixed;inset:0;opacity:.022;z-index:1;pointer-events:none;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");background-size:200px}
+.noise{position:fixed;inset:0;opacity:.02;z-index:1;pointer-events:none;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");background-size:200px}
 #cur{position:fixed;width:11px;height:11px;background:var(--rust);border-radius:50%;pointer-events:none;z-index:9999;transform:translate(-50%,-50%);mix-blend-mode:multiply;transition:width .18s,height .18s}
 #cur-r{position:fixed;width:32px;height:32px;border:1.5px solid var(--rust);border-radius:50%;pointer-events:none;z-index:9998;transform:translate(-50%,-50%);opacity:.45;transition:width .28s,height .28s,opacity .28s}
 main{position:relative;z-index:2}
 
+/* ── LANG SYSTEM ── simple class toggle on body */
+.lang-en .es { display: none !important; }
+.lang-es .en { display: none !important; }
+
 /* NAV */
 nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:18px 48px;border-bottom:1px solid transparent;transition:border-color .3s,background .3s}
-nav.sc{border-color:var(--ink);background:rgba(242,239,232,.93);backdrop-filter:blur(12px)}
+nav.sc{border-color:var(--ink);background:rgba(242,239,232,.94);backdrop-filter:blur(12px)}
 .n-logo{font-family:var(--sans);font-weight:800;font-size:13px;letter-spacing:.08em;text-transform:uppercase}
 .n-logo span{color:var(--rust)}
 .n-links{display:flex;gap:28px;list-style:none}
@@ -57,7 +79,7 @@ nav.sc{border-color:var(--ink);background:rgba(242,239,232,.93);backdrop-filter:
 @keyframes sa{0%{left:-100%}100%{left:100%}}
 .h-right{padding:110px 48px 72px;display:flex;flex-direction:column;justify-content:center}
 .arch-title{font-size:9px;letter-spacing:.2em;text-transform:uppercase;color:var(--rust);margin-bottom:16px}
-.arch-nodes{position:relative;height:300px;max-width:460px}
+.arch-nodes{position:relative;height:290px;max-width:460px}
 .arch-svg{position:absolute;inset:0;pointer-events:none}
 .a-node{position:absolute;border:1px solid var(--ink);background:var(--paper);padding:9px 13px;font-size:9px;font-family:var(--mono);letter-spacing:.05em;white-space:nowrap;transition:background .2s,color .2s;cursor:default}
 .a-node:hover{background:var(--ink);color:var(--paper)}
@@ -69,7 +91,7 @@ nav.sc{border-color:var(--ink);background:rgba(242,239,232,.93);backdrop-filter:
 .m-val{font-family:var(--serif);font-size:38px;line-height:1;color:var(--rust);display:block}
 .m-lbl{font-size:8px;letter-spacing:.12em;text-transform:uppercase;opacity:.45;margin-top:4px;display:block}
 
-/* SECTION */
+/* SECTION COMMONS */
 section{position:relative;z-index:2}
 .s-hdr{display:flex;align-items:baseline;gap:16px;margin-bottom:52px}
 .s-num{font-size:10px;color:var(--rust);letter-spacing:.1em}
@@ -86,20 +108,15 @@ section{position:relative;z-index:2}
 .s-lbl{font-size:9px;letter-spacing:.18em;text-transform:uppercase;color:var(--rust);margin-bottom:14px}
 .s-tags{display:flex;flex-wrap:wrap;gap:7px}
 .tag{padding:5px 11px;border:1px solid;font-size:9px;font-family:var(--mono);letter-spacing:.08em;text-transform:uppercase;transition:background .2s,color .2s;cursor:default}
-.tp{border-color:var(--ink);color:var(--ink)}
-.ta{border-color:var(--rust);color:var(--rust)}
+.tp{border-color:var(--ink);color:var(--ink)}.ta{border-color:var(--rust);color:var(--rust)}
 .tag:hover{background:var(--ink);color:var(--paper);border-color:var(--ink)}
 .terminal{background:var(--ink);color:#a8d4a8;font-family:var(--mono);font-size:11.5px;line-height:1.82;border:1px solid var(--ink);overflow:hidden}
 .t-bar{background:#1a1a26;padding:9px 14px;display:flex;align-items:center;gap:7px;border-bottom:1px solid #2a2a3a}
 .td{width:9px;height:9px;border-radius:50%}
 .t-title{color:#444;font-size:10px;margin-left:6px}
 .t-body{padding:18px 22px}
-.t-body .pr{color:var(--amber)}
-.t-body .cm{color:#fff}
-.t-body .ou{color:#a8d4a8;opacity:.8}
-.t-body .co{color:#444}
-.t-body .hl{color:var(--rust)}
-.t-body .ky{color:#6aafd4}
+.t-body .pr{color:var(--amber)}.t-body .cm{color:#fff}.t-body .ou{color:#a8d4a8;opacity:.8}
+.t-body .co{color:#444}.t-body .hl{color:var(--rust)}.t-body .ky{color:#6aafd4}
 .tblink{display:inline-block;width:7px;height:13px;background:#a8d4a8;vertical-align:middle;animation:blink 1.1s step-end infinite;margin-left:2px}
 @keyframes blink{50%{opacity:0}}
 
@@ -163,6 +180,51 @@ section{position:relative;z-index:2}
 .ti-d.f{background:var(--rust);border-color:var(--rust);opacity:.75}
 .t-item:hover .ti-d.f{opacity:1}
 
+/* SERVICES */
+#services{border-top:1px solid var(--ink);padding:72px 48px}
+.svc-intro{display:grid;grid-template-columns:1fr 1fr;border:1px solid var(--ink);margin-bottom:0}
+.svc-intro-left{padding:40px;border-right:1px solid var(--ink)}
+.svc-intro-right{padding:40px;display:flex;align-items:center}
+.svc-tagline{font-family:var(--serif);font-size:clamp(22px,2.8vw,38px);line-height:1.1}
+.svc-tagline em{font-style:italic;color:var(--rust)}
+.svc-sub{font-size:12.5px;line-height:1.88;opacity:.62}
+.svc-grid{display:grid;grid-template-columns:repeat(3,1fr);border-left:1px solid var(--ink);border-bottom:1px solid var(--ink)}
+.svc-card{border-right:1px solid var(--ink);border-top:1px solid var(--ink);padding:36px 32px;position:relative;overflow:hidden;transition:background .22s;cursor:default}
+.svc-card:hover{background:var(--ink);color:var(--paper)}
+.svc-card::after{content:'';position:absolute;top:0;right:0;width:0;height:3px;background:var(--rust);transition:width .28s ease}
+.svc-card:hover::after{width:100%}
+.svc-ico{font-size:26px;margin-bottom:18px;display:block;transition:transform .2s}
+.svc-card:hover .svc-ico{transform:scale(1.1)}
+.svc-name{font-family:var(--sans);font-weight:800;font-size:15px;margin-bottom:8px;line-height:1.2}
+.svc-desc{font-size:11.5px;line-height:1.8;opacity:.6;margin-bottom:16px}
+.svc-card:hover .svc-desc{opacity:.72}
+.svc-examples{padding-top:14px;border-top:1px solid rgba(0,0,0,.1);transition:border-color .2s}
+.svc-card:hover .svc-examples{border-top-color:rgba(255,255,255,.12)}
+.svc-ex-lbl{font-size:8px;letter-spacing:.16em;text-transform:uppercase;color:var(--rust);margin-bottom:8px;font-family:var(--mono)}
+.svc-card:hover .svc-ex-lbl{color:var(--amber)}
+.svc-ex-list{display:flex;flex-direction:column;gap:6px}
+.svc-ex-item{font-size:10.5px;opacity:.55;font-family:var(--mono);padding-left:14px;position:relative;line-height:1.5}
+.svc-ex-item::before{content:'→';position:absolute;left:0;color:var(--rust);font-size:9px}
+.svc-card:hover .svc-ex-item{opacity:.65}
+.svc-card:hover .svc-ex-item::before{color:var(--amber)}
+/* CTA */
+.svc-cta{display:grid;grid-template-columns:1fr auto;border:1px solid var(--ink);background:var(--ink);color:var(--paper)}
+.svc-cta-left{padding:44px 48px;border-right:1px solid rgba(255,255,255,.1)}
+.svc-cta-right{padding:44px 48px;display:flex;flex-direction:column;justify-content:center;gap:16px;min-width:300px}
+.svc-cta-eyebrow{font-size:9px;letter-spacing:.2em;text-transform:uppercase;color:var(--rust);margin-bottom:12px;font-family:var(--mono)}
+.svc-cta-title{font-family:var(--serif);font-size:clamp(20px,2.4vw,30px);line-height:1.15;opacity:.95}
+.svc-cta .btn-p{background:var(--paper);color:var(--ink);border-color:var(--paper)}
+.svc-cta .btn-p::before{background:var(--rust)}
+.svc-cta .btn-p:hover{color:var(--paper)}
+.svc-cta-note{font-size:10px;opacity:.38;font-family:var(--mono);line-height:1.7;max-width:260px}
+.svc-industries{display:grid;grid-template-columns:repeat(4,1fr);border:1px solid var(--ink);border-top:none}
+.svc-ind{padding:22px 24px;border-right:1px solid var(--ink);display:flex;flex-direction:column;gap:4px;transition:background .2s;cursor:default}
+.svc-ind:last-child{border-right:none}
+.svc-ind:hover{background:rgba(200,75,47,.04)}
+.svc-ind-ico{font-size:18px;margin-bottom:4px}
+.svc-ind-name{font-family:var(--sans);font-weight:700;font-size:12px}
+.svc-ind-desc{font-size:10px;opacity:.45;font-family:var(--mono);line-height:1.6}
+
 /* SKILLS */
 #skills{border-top:1px solid var(--ink);display:grid;grid-template-columns:1fr 1fr}
 .sk-left{padding:72px 48px;border-right:1px solid var(--ink)}
@@ -171,8 +233,7 @@ section{position:relative;z-index:2}
 .sk-cat-lbl{font-size:9px;letter-spacing:.18em;text-transform:uppercase;color:var(--rust);margin-bottom:14px}
 .sk-bar{margin-bottom:10px}
 .sk-bar-top{display:flex;justify-content:space-between;margin-bottom:5px;font-size:10px}
-.sk-bar-nm{opacity:.75}
-.sk-bar-pct{color:var(--rust)}
+.sk-bar-nm{opacity:.75}.sk-bar-pct{color:var(--rust)}
 .sk-track{height:2px;background:rgba(0,0,0,.09);overflow:hidden}
 .sk-fill{height:100%;background:var(--ink);width:0;transition:width 1.1s ease}
 .sk-fill.animate{width:var(--w)}
@@ -189,7 +250,7 @@ section{position:relative;z-index:2}
 .ct-left{padding:72px 48px;border-right:1px solid var(--ink);display:flex;flex-direction:column;justify-content:space-between}
 .ct-head{font-family:var(--serif);font-size:clamp(34px,4vw,60px);line-height:1.04;max-width:420px}
 .ct-head em{font-style:italic;color:var(--rust)}
-.ct-sub{margin-top:20px;font-size:12.5px;line-height:1.82;opacity:.58;font-family:var(--mono);max-width:380px}
+.ct-sub{margin-top:20px;font-size:12.5px;line-height:1.82;opacity:.58;max-width:380px}
 .ct-links{margin-top:40px;display:flex;flex-direction:column;border:1px solid var(--ink)}
 .ct-link{display:flex;align-items:center;justify-content:space-between;padding:16px 22px;border-bottom:1px solid var(--ink);text-decoration:none;color:var(--ink);font-family:var(--mono);font-size:11px;letter-spacing:.06em;transition:background .2s,color .2s}
 .ct-link:last-child{border-bottom:none}
@@ -219,18 +280,8 @@ footer{position:relative;z-index:2;border-top:1px solid var(--ink);padding:20px 
 .fu:nth-child(3){transition-delay:.16s}
 .fu:nth-child(4){transition-delay:.24s}
 
-/* LANG */
-.t-es,.t-en{display:none}
-body.lang-es .t-es{display:contents}
-body.lang-en .t-en{display:contents}
-body.lang-es .t-es.il{display:inline}
-body.lang-en .t-en.il{display:inline}
-body.lang-es .t-es.bl{display:block}
-body.lang-en .t-en.bl{display:block}
-
 @media(max-width:900px){
-  nav{padding:14px 20px}
-  .n-links{display:none}
+  nav{padding:14px 20px}.n-links{display:none}
   #hero{grid-template-columns:1fr}
   .h-left{padding:90px 20px 40px;border-right:none;border-bottom:1px solid var(--ink)}
   .h-right{padding:36px 20px}
@@ -243,11 +294,17 @@ body.lang-en .t-en.bl{display:block}
   .exp-r{align-items:flex-start}
   #projects{padding:44px 20px}
   .proj-grid{grid-template-columns:1fr}
-  .proj-card{border-right:none}
-  .proj-card:nth-last-child(-n+2){border-bottom:1px solid var(--ink)}
+  .proj-card{border-right:none;border-bottom:1px solid var(--ink)}
   .proj-card:last-child{border-bottom:none}
   #tech{padding:44px 20px}
   .t-grid{grid-template-columns:repeat(auto-fill,minmax(140px,1fr))}
+  #services{padding:44px 20px}
+  .svc-intro,.svc-cta{grid-template-columns:1fr}
+  .svc-intro-left,.svc-cta-left{border-right:none;border-bottom:1px solid rgba(0,0,0,.1)}
+  .svc-cta-left{border-bottom-color:rgba(255,255,255,.1)}
+  .svc-grid{grid-template-columns:1fr}
+  .svc-industries{grid-template-columns:repeat(2,1fr)}
+  .svc-ind:nth-child(2){border-right:none}
   #skills{grid-template-columns:1fr}
   .sk-left{border-right:none;border-bottom:1px solid var(--ink);padding:44px 20px}
   .sk-right{padding:44px 20px}
@@ -267,70 +324,84 @@ body.lang-en .t-en.bl{display:block}
 <nav id="nav">
   <div class="n-logo">D<span>.</span>Israel</div>
   <ul class="n-links">
-    <li><a href="#about"><span class="t-es il">Sobre mí</span><span class="t-en il">About</span></a></li>
-    <li><a href="#experience"><span class="t-es il">Experiencia</span><span class="t-en il">Experience</span></a></li>
-    <li><a href="#projects"><span class="t-es il">Proyectos</span><span class="t-en il">Projects</span></a></li>
-    <li><a href="#tech"><span class="t-es il">Tecnologías</span><span class="t-en il">Tech</span></a></li>
-    <li><a href="#contact"><span class="t-es il">Contacto</span><span class="t-en il">Contact</span></a></li>
+    <li><a href="#about"><span class="es">Sobre mí</span><span class="en">About</span></a></li>
+    <li><a href="#experience"><span class="es">Experiencia</span><span class="en">Experience</span></a></li>
+    <li><a href="#projects"><span class="es">Proyectos</span><span class="en">Projects</span></a></li>
+    <li><a href="#tech"><span class="es">Tecnologías</span><span class="en">Tech</span></a></li>
+    <li><a href="#services"><span class="es">Servicios</span><span class="en">Services</span></a></li>
+    <li><a href="#contact"><span class="es">Contacto</span><span class="en">Contact</span></a></li>
   </ul>
   <div class="n-right">
-    <div class="n-av"><span class="sdot"></span><span class="t-es il">Disponible</span><span class="t-en il">Available</span></div>
+    <div class="n-av"><span class="sdot"></span><span class="es">Disponible</span><span class="en">Available</span></div>
     <button class="lbtn" onclick="toggleLang()"><span id="lf">🇺🇸</span><span id="ll">EN</span></button>
   </div>
 </nav>
 
 <main>
 
-<!-- ══════════════ HERO ══════════════ -->
+<!-- ══ HERO ══ -->
 <section id="hero">
   <div class="h-left">
-    <p class="h-tag"><span class="t-es il">// Arquitecto de Software · Monterrey, México</span><span class="t-en il">// Software Architect · Monterrey, México</span></p>
-    <h1 class="h-name">David<em>Israel.</em></h1>
-    <p class="h-role"><span class="t-es il">Senior Full-Stack · Arquitecto de Sistemas</span><span class="t-en il">Senior Full-Stack · Systems Architect</span></p>
-    <p class="h-desc">
-      <span class="t-es bl">Diseño sistemas que no colapsan bajo presión — microservicios event-driven, pagos distribuidos, arquitectura hexagonal. Lidero equipos, cuestiono supuestos y construyo cosas que duran.</span>
-      <span class="t-en bl">I design systems that don't break under pressure — event-driven microservices, distributed payments, hexagonal architecture. I lead teams, challenge assumptions, and ship things that last.</span>
+    <p class="h-tag">
+      <span class="es">// Arquitecto de Software · Monterrey, México</span>
+      <span class="en">// Software Architect · Monterrey, México</span>
     </p>
+    <h1 class="h-name">David<em>Israel.</em></h1>
+    <p class="h-role">
+      <span class="es">Senior Full-Stack · Arquitecto de Sistemas</span>
+      <span class="en">Senior Full-Stack · Systems Architect</span>
+    </p>
+    <p class="h-desc es">Diseño sistemas que no colapsan bajo presión — microservicios event-driven, pagos distribuidos, arquitectura hexagonal. Lidero equipos, cuestiono supuestos y construyo cosas que duran.</p>
+    <p class="h-desc en">I design systems that don't break under pressure — event-driven microservices, distributed payments, hexagonal architecture. I lead teams, challenge assumptions, and ship things that last.</p>
     <div class="h-cta">
-      <a href="#contact" class="btn-p"><span class="t-es il">Construyamos algo</span><span class="t-en il">Let's build something</span><span> →</span></a>
-      <a href="#projects" class="btn-g"><span class="t-es il">Ver proyectos</span><span class="t-en il">See my work</span></a>
+      <a href="#contact" class="btn-p">
+        <span class="es">Construyamos algo</span><span class="en">Let's build something</span><span> →</span>
+      </a>
+      <a href="#services" class="btn-g">
+        <span class="es">Ver servicios</span><span class="en">See services</span>
+      </a>
     </div>
     <div class="h-scroll"><div class="h-sline"></div>scroll</div>
   </div>
-
   <div class="h-right">
     <div>
-      <p class="arch-title"><span class="t-es il">// arquitectura del sistema actual</span><span class="t-en il">// current system architecture</span></p>
+      <p class="arch-title">
+        <span class="es">// arquitectura del sistema actual</span>
+        <span class="en">// current system architecture</span>
+      </p>
       <div class="arch-nodes" id="archNodes">
         <svg class="arch-svg" id="archSvg" viewBox="0 0 460 290" xmlns="http://www.w3.org/2000/svg"></svg>
       </div>
     </div>
     <div class="h-metrics">
-      <div class="metric"><span class="m-val" data-count="6">0</span><span class="m-lbl"><span class="t-es il">Años exp.</span><span class="t-en il">Years exp.</span></span></div>
-      <div class="metric"><span class="m-val" data-count="12">0</span><span class="m-lbl"><span class="t-es il">Sistemas</span><span class="t-en il">Systems</span></span></div>
-      <div class="metric"><span class="m-val" data-count="4">0</span><span class="m-lbl"><span class="t-es il">Equipo</span><span class="t-en il">Team led</span></span></div>
+      <div class="metric">
+        <span class="m-val" data-count="6">0</span>
+        <span class="m-lbl"><span class="es">Años exp.</span><span class="en">Years exp.</span></span>
+      </div>
+      <div class="metric">
+        <span class="m-val" data-count="12">0</span>
+        <span class="m-lbl"><span class="es">Sistemas</span><span class="en">Systems</span></span>
+      </div>
+      <div class="metric">
+        <span class="m-val" data-count="4">0</span>
+        <span class="m-lbl"><span class="es">Equipo</span><span class="en">Team led</span></span>
+      </div>
     </div>
   </div>
 </section>
 
-<!-- ══════════════ ABOUT ══════════════ -->
+<!-- ══ ABOUT ══ -->
 <section id="about">
   <div class="ab-left">
-    <div class="s-hdr"><span class="s-num">01</span><h2 class="s-title"><span class="t-es il">Sobre mí</span><span class="t-en il">About</span></h2><div class="s-line"></div></div>
-    <p class="ab-text fu">
-      <span class="t-es bl">Soy <strong>arquitecto de software y desarrollador full-stack senior</strong> de Monterrey, México. Con más de 6 años de experiencia real, me especializo en diseñar <strong>sistemas distribuidos y event-driven</strong> — el tipo que sobrevive cargas de producción reales.</span>
-      <span class="t-en bl">I'm a <strong>software architect and senior full-stack engineer</strong> from Monterrey, México. With 6+ years of hands-on experience, I specialize in designing <strong>distributed, event-driven systems</strong> — the kind that survive real production loads.</span>
-    </p>
-    <p class="ab-text fu" style="margin-top:18px">
-      <span class="t-es bl">Actualmente liderando la migración arquitectónica en <strong>Grupo Directo Express</strong> de un monolito legacy a una plataforma de microservicios — integrando los <strong>rieles de pago STP/SPEI</strong>, DDD y CQRS a escala. También trabajo en visión computacional y OCR para control de flota.</span>
-      <span class="t-en bl">Currently leading the architectural migration at <strong>Grupo Directo Express</strong> — integrating <strong>STP/SPEI Mexican payment rails</strong>, DDD, and CQRS at scale. Also building computer vision and OCR systems for fleet control.</span>
-    </p>
-    <p class="ab-text fu" style="margin-top:18px">
-      <span class="t-es bl">Cuando no estoy diseñando sistemas, estoy en ranked de Valorant, preparando un café negro oscuro, o pensando en teclados ergonómicos.</span>
-      <span class="t-en bl">When not architecting systems, I'm grinding competitive Valorant, pulling a dark roast, or thinking about ergonomic keyboards.</span>
-    </p>
+    <div class="s-hdr"><span class="s-num">01</span><h2 class="s-title"><span class="es">Sobre mí</span><span class="en">About</span></h2><div class="s-line"></div></div>
+    <p class="ab-text fu es">Soy <strong>arquitecto de software y desarrollador full-stack senior</strong> de Monterrey, México. Con más de 6 años de experiencia real, me especializo en diseñar <strong>sistemas distribuidos y event-driven</strong> — el tipo que sobrevive cargas de producción reales.</p>
+    <p class="ab-text fu en">I'm a <strong>software architect and senior full-stack engineer</strong> from Monterrey, México. With 6+ years of hands-on experience, I specialize in designing <strong>distributed, event-driven systems</strong> — the kind that survive real production loads.</p>
+    <p class="ab-text fu es" style="margin-top:18px">Actualmente liderando la migración arquitectónica en <strong>Grupo Directo Express</strong> de un monolito legacy a microservicios — integrando <strong>STP/SPEI</strong>, DDD y CQRS a escala. También construyo sistemas de visión computacional y OCR para control de flota.</p>
+    <p class="ab-text fu en" style="margin-top:18px">Currently leading the architectural migration at <strong>Grupo Directo Express</strong> — integrating <strong>STP/SPEI Mexican payment rails</strong>, DDD, and CQRS at scale. Also building computer vision and OCR systems for fleet control.</p>
+    <p class="ab-text fu es" style="margin-top:18px">Cuando no estoy diseñando sistemas, estoy en ranked de Valorant, preparando un café negro oscuro, o pensando en teclados ergonómicos.</p>
+    <p class="ab-text fu en" style="margin-top:18px">When not architecting systems, I'm grinding competitive Valorant, pulling a dark roast, or thinking about ergonomic keyboards.</p>
     <div class="ab-stack fu">
-      <p class="s-lbl"><span class="t-es il">// lenguajes y runtimes principales</span><span class="t-en il">// primary languages & runtimes</span></p>
+      <p class="s-lbl"><span class="es">// lenguajes y runtimes principales</span><span class="en">// primary languages & runtimes</span></p>
       <div class="s-tags">
         <span class="tag tp">C# / .NET 8</span><span class="tag ta">Node.js</span><span class="tag tp">TypeScript</span>
         <span class="tag tp">Java</span><span class="tag tp">Dart/Flutter</span><span class="tag ta">Python</span>
@@ -339,7 +410,7 @@ body.lang-en .t-en.bl{display:block}
     </div>
   </div>
   <div class="ab-right">
-    <div class="s-hdr"><span class="s-num">&nbsp;</span><h2 class="s-title">Terminal</h2><div class="s-line"></div></div>
+    <div class="s-hdr"><span class="s-num"></span><h2 class="s-title">Terminal</h2><div class="s-line"></div></div>
     <div class="terminal fu">
       <div class="t-bar"><span class="td" style="background:#ff5f56"></span><span class="td" style="background:#ffbd2e"></span><span class="td" style="background:#27c93f"></span><span class="t-title">david@mx:~</span></div>
       <div class="t-body">
@@ -364,57 +435,80 @@ body.lang-en .t-en.bl{display:block}
   </div>
 </section>
 
-<!-- ══════════════ EXPERIENCE ══════════════ -->
+<!-- ══ EXPERIENCE ══ -->
 <section id="experience">
-  <div class="s-hdr"><span class="s-num">02</span><h2 class="s-title"><span class="t-es il">Experiencia</span><span class="t-en il">Experience</span></h2><div class="s-line"></div></div>
+  <div class="s-hdr"><span class="s-num">02</span><h2 class="s-title"><span class="es">Experiencia</span><span class="en">Experience</span></h2><div class="s-line"></div></div>
   <div class="exp-list">
+
     <div class="exp-row fu">
-      <div class="exp-co">Grupo Directo Express<span class="exp-etag"><span class="t-es il">Actual</span><span class="t-en il">Current</span></span></div>
+      <div class="exp-co">
+        Grupo Directo Express
+        <span class="exp-etag"><span class="es">Actual</span><span class="en">Current</span></span>
+      </div>
       <div class="exp-main">
-        <h3 class="exp-role"><span class="t-es bl">Senior Full-Stack & Arquitecto de Software</span><span class="t-en bl">Senior Full-Stack & Software Architect</span></h3>
-        <p class="exp-desc"><span class="t-es bl">Liderando la migración arquitectónica de monolito legacy a microservicios event-driven. Diseñando integraciones STP/SPEI, patrones Saga y Arquitectura Hexagonal en .NET 8. Gestionando equipo de 3–4 desarrolladores. Desarrollando sistema de Computer Vision y OCR para control de flota de tractos.</span><span class="t-en bl">Leading architectural migration from legacy monolith to event-driven microservices. Designing STP/SPEI payment integrations, Saga patterns, and Hexagonal Architecture on .NET 8. Managing a team of 3–4 developers. Building Computer Vision & OCR system for truck fleet control.</span></p>
+        <h3 class="exp-role es">Senior Full-Stack & Arquitecto de Software</h3>
+        <h3 class="exp-role en">Senior Full-Stack & Software Architect</h3>
+        <p class="exp-desc es">Liderando la migración de monolito legacy a microservicios event-driven. Integraciones STP/SPEI, patrones Saga y Arquitectura Hexagonal en .NET 8. Gestiono equipo de 3–4 devs. Sistema de Computer Vision & OCR para control de flota de tractos.</p>
+        <p class="exp-desc en">Leading legacy monolith migration to event-driven microservices. STP/SPEI integrations, Saga patterns, Hexagonal Architecture on .NET 8. Managing 3–4 devs. Building Computer Vision & OCR system for truck fleet control.</p>
         <p class="exp-tech">.NET 8 · C# · Wolverine · CQRS · DDD · GCP · PostgreSQL · Redis · OpenCV · Python</p>
       </div>
       <div class="exp-r"><span class="exp-date">2022 — Present</span><span class="exp-arr">→</span></div>
     </div>
+
     <div class="exp-row fu">
-      <div class="exp-co">Logistics / HR SaaS<span class="exp-etag"><span class="t-es il">Anterior</span><span class="t-en il">Previous</span></span></div>
+      <div class="exp-co">
+        Logistics / HR SaaS
+        <span class="exp-etag"><span class="es">Anterior</span><span class="en">Previous</span></span>
+      </div>
       <div class="exp-main">
-        <h3 class="exp-role"><span class="t-es bl">Ingeniero Full-Stack</span><span class="t-en bl">Full-Stack Engineer</span></h3>
-        <p class="exp-desc"><span class="t-es bl">Construí y mantuve sistemas distribuidos para SaaS de logística y analítica de RRHH. Trabajé en múltiples stacks: Node.js, NestJS, Java Spring Boot y Flutter mobile con infraestructura Azure y GCP.</span><span class="t-en bl">Built and maintained distributed systems for logistics and HR analytics SaaS across Node.js, NestJS, Java Spring Boot, and Flutter mobile with Azure and GCP infrastructure.</span></p>
+        <h3 class="exp-role es">Ingeniero Full-Stack</h3>
+        <h3 class="exp-role en">Full-Stack Engineer</h3>
+        <p class="exp-desc es">Construí sistemas distribuidos para SaaS de logística y analítica de RRHH. Múltiples stacks: Node.js, NestJS, Java Spring Boot y Flutter mobile con Azure y GCP.</p>
+        <p class="exp-desc en">Built distributed systems for logistics and HR analytics SaaS across Node.js, NestJS, Java Spring Boot, and Flutter mobile with Azure and GCP.</p>
         <p class="exp-tech">NestJS · Spring Boot · Flutter · Azure · PostgreSQL · MongoDB</p>
       </div>
       <div class="exp-r"><span class="exp-date">2019 — 2022</span><span class="exp-arr">→</span></div>
     </div>
+
     <div class="exp-row fu">
-      <div class="exp-co"><span class="t-es bl">Freelance & Consultoría</span><span class="t-en bl">Freelance & Consulting</span><span class="exp-etag"><span class="t-es il">Paralelo</span><span class="t-en il">Side</span></span></div>
+      <div class="exp-co">
+        <span class="es">Freelance & Consultoría</span>
+        <span class="en">Freelance & Consulting</span>
+        <span class="exp-etag"><span class="es">Paralelo</span><span class="en">Side</span></span>
+      </div>
       <div class="exp-main">
-        <h3 class="exp-role"><span class="t-es bl">Arquitecto de Soluciones</span><span class="t-en bl">Solutions Architect</span></h3>
-        <p class="exp-desc"><span class="t-es bl">Propuestas y arquitecturas para clientes: sistema de facturación con DTE electrónica en El Salvador (~$112k), sistema de administración escolar SaaS para escuela de idiomas en Monterrey.</span><span class="t-en bl">Delivered proposals and architectures including a billing system with DTE electronic invoicing in El Salvador (~$112k project), and a school administration SaaS for a language school in Monterrey.</span></p>
+        <h3 class="exp-role es">Arquitecto de Soluciones</h3>
+        <h3 class="exp-role en">Solutions Architect</h3>
+        <p class="exp-desc es">Sistema de facturación con DTE electrónica en El Salvador (~$112k). Sistema de administración escolar SaaS para escuela de idiomas en Monterrey.</p>
+        <p class="exp-desc en">Billing system with DTE electronic invoicing in El Salvador (~$112k). School administration SaaS for a language school in Monterrey.</p>
         <p class="exp-tech">System Design · DTE · SaaS Architecture · Proposal Writing</p>
       </div>
       <div class="exp-r"><span class="exp-date">2021 — Present</span><span class="exp-arr">→</span></div>
     </div>
+
   </div>
 </section>
 
-<!-- ══════════════ PROJECTS ══════════════ -->
+<!-- ══ PROJECTS ══ -->
 <section id="projects">
-  <div class="s-hdr"><span class="s-num">03</span><h2 class="s-title"><span class="t-es il">Proyectos</span><span class="t-en il">Projects</span></h2><div class="s-line"></div></div>
+  <div class="s-hdr"><span class="s-num">03</span><h2 class="s-title"><span class="es">Proyectos</span><span class="en">Projects</span></h2><div class="s-line"></div></div>
   <div class="proj-grid">
 
     <div class="proj-card fu">
       <p class="p-num">001</p><span class="p-icon">⬡</span>
-      <h3 class="p-name">DX Backend — <span class="t-es il">Plataforma Financiera</span><span class="t-en il">Financial Platform</span></h3>
-      <p class="p-desc"><span class="t-es bl">Sistema completo de gestión financiera y transporte. Event-driven con Wolverine, DDD, Arquitectura Hexagonal, ecosistema multi-agente IA y rieles de pago STP/SPEI para el sistema bancario mexicano.</span><span class="t-en bl">Full financial & transportation management system. Event-driven with Wolverine, DDD, Hexagonal Architecture, multi-agent AI ecosystem, and STP/SPEI payment rails for the Mexican banking system.</span></p>
+      <h3 class="p-name">DX Backend — <span class="es">Plataforma Financiera</span><span class="en">Financial Platform</span></h3>
+      <p class="p-desc es">Sistema completo de gestión financiera y transporte. Event-driven con Wolverine, DDD, Arquitectura Hexagonal, ecosistema multi-agente IA y rieles de pago STP/SPEI para el sistema bancario mexicano.</p>
+      <p class="p-desc en">Full financial & transportation management system. Event-driven with Wolverine, DDD, Hexagonal Architecture, multi-agent AI ecosystem, and STP/SPEI payment rails for the Mexican banking system.</p>
       <div class="p-tags"><span class="p-tag">.NET 8</span><span class="p-tag">CQRS</span><span class="p-tag">Wolverine</span><span class="p-tag">GCP</span><span class="p-tag">STP/SPEI</span></div>
       <a href="https://github.com/CHINOBv" target="_blank" class="p-link">GitHub →</a>
     </div>
 
     <div class="proj-card fu">
       <p class="p-num">002</p><span class="p-icon">◈</span>
-      <h3 class="p-name"><span class="t-es bl">Migración Monolito → Microservicios</span><span class="t-en bl">Monolith → Microservices Migration</span></h3>
-      <p class="p-desc"><span class="t-es bl">Lideré la transformación arquitectónica completa en Grupo Directo Express. Diseñé la estrategia del event bus, bounded contexts con DDD y el pipeline de despliegue en GCP Cloud Run.</span><span class="t-en bl">Led the full architectural transformation at Grupo Directo Express. Designed the event bus strategy, service boundaries using DDD bounded contexts, and deployment pipeline on GCP Cloud Run.</span></p>
+      <h3 class="p-name es">Migración Monolito → Microservicios</h3>
+      <h3 class="p-name en">Monolith → Microservices Migration</h3>
+      <p class="p-desc es">Lideré la transformación arquitectónica completa en Grupo Directo Express. Estrategia del event bus, bounded contexts con DDD y despliegue en GCP Cloud Run.</p>
+      <p class="p-desc en">Led the full architectural transformation at Grupo Directo Express. Event bus strategy, DDD bounded contexts, and deployment on GCP Cloud Run.</p>
       <div class="p-tags"><span class="p-tag">Microservices</span><span class="p-tag">DDD</span><span class="p-tag">Event Bus</span><span class="p-tag">Cloud Run</span></div>
       <a href="https://github.com/CHINOBv" target="_blank" class="p-link">Case study →</a>
     </div>
@@ -422,39 +516,39 @@ body.lang-en .t-en.bl{display:block}
     <div class="proj-card fu">
       <p class="p-num">003</p><span class="p-icon">◎</span>
       <h3 class="p-name">GPS Geofencing — Azure Service Bus</h3>
-      <p class="p-desc"><span class="t-es bl">Sistema de rastreo GPS en tiempo real con alertas de geocercas, mensajería topic-based en Azure Service Bus y propagación sub-segundo para gestión de flota logística.</span><span class="t-en bl">Real-time GPS coordinate tracking system with geofencing alerts, topic-based messaging on Azure Service Bus, and sub-second event propagation for logistics fleet management.</span></p>
+      <p class="p-desc es">Rastreo GPS en tiempo real con alertas de geocercas y mensajería topic-based en Azure Service Bus para gestión de flota logística.</p>
+      <p class="p-desc en">Real-time GPS tracking with geofence alerts and topic-based messaging on Azure Service Bus for logistics fleet management.</p>
       <div class="p-tags"><span class="p-tag">Azure</span><span class="p-tag">Service Bus</span><span class="p-tag">Geofencing</span><span class="p-tag">Real-time</span></div>
-      <a href="https://github.com/CHINOBv" target="_blank" class="p-link"><span class="t-es il">Ver proyecto</span><span class="t-en il">View project</span> →</a>
+      <a href="https://github.com/CHINOBv" target="_blank" class="p-link"><span class="es">Ver proyecto</span><span class="en">View project</span> →</a>
     </div>
 
     <div class="proj-card fu">
       <p class="p-num">004</p><span class="p-icon">◉</span>
-      <h3 class="p-name"><span class="t-es bl">Computer Vision & OCR — Control de Tractos</span><span class="t-en bl">Computer Vision & OCR — Truck Entry Control</span></h3>
-      <p class="p-desc"><span class="t-es bl">Construí un sistema de detección automática de entradas y salidas de tractos usando visión computacional y OCR. El sistema identifica placas, clasifica vehículos y registra en tiempo real los movimientos de la flota sin intervención humana.</span><span class="t-en bl">Built an automated truck entry/exit detection system using computer vision and OCR. The system identifies license plates, classifies vehicles, and logs fleet movements in real time with zero human intervention.</span></p>
+      <h3 class="p-name es">Computer Vision & OCR — Control de Tractos</h3>
+      <h3 class="p-name en">Computer Vision & OCR — Truck Entry Control</h3>
+      <p class="p-desc es">Sistema de detección automática de entradas y salidas de tractos usando visión computacional y OCR. Identifica placas, clasifica vehículos y registra movimientos de la flota en tiempo real sin intervención humana.</p>
+      <p class="p-desc en">Automated truck entry/exit detection using computer vision and OCR. Identifies license plates, classifies vehicles, and logs fleet movements in real time with zero human intervention.</p>
       <div class="p-tags"><span class="p-tag">Computer Vision</span><span class="p-tag">OCR</span><span class="p-tag">Python</span><span class="p-tag">OpenCV</span><span class="p-tag">Real-time</span></div>
-      <a href="https://github.com/CHINOBv" target="_blank" class="p-link"><span class="t-es il">Ver en GitHub</span><span class="t-en il">View on GitHub</span> →</a>
+      <a href="https://github.com/CHINOBv" target="_blank" class="p-link"><span class="es">Ver en GitHub</span><span class="en">View on GitHub</span> →</a>
     </div>
 
   </div>
 </section>
 
-<!-- ══════════════ TECH STACK ══════════════ -->
+<!-- ══ TECH STACK ══ -->
 <section id="tech">
-  <div class="s-hdr"><span class="s-num">04</span><h2 class="s-title"><span class="t-es il">Tecnologías</span><span class="t-en il">Tech Stack</span></h2><div class="s-line"></div></div>
-
+  <div class="s-hdr"><span class="s-num">04</span><h2 class="s-title"><span class="es">Tecnologías</span><span class="en">Tech Stack</span></h2><div class="s-line"></div></div>
   <div class="tf-bar">
-    <button class="tf-btn active" data-cat="all"><span class="t-es il">Todas</span><span class="t-en il">All</span></button>
+    <button class="tf-btn active" data-cat="all"><span class="es">Todas</span><span class="en">All</span></button>
     <button class="tf-btn" data-cat="backend">Backend</button>
     <button class="tf-btn" data-cat="frontend">Frontend</button>
     <button class="tf-btn" data-cat="mobile">Mobile</button>
     <button class="tf-btn" data-cat="cloud">Cloud / Infra</button>
     <button class="tf-btn" data-cat="db">Databases</button>
-    <button class="tf-btn" data-cat="arch"><span class="t-es il">Arquitectura</span><span class="t-en il">Architecture</span></button>
+    <button class="tf-btn" data-cat="arch"><span class="es">Arquitectura</span><span class="en">Architecture</span></button>
     <button class="tf-btn" data-cat="ai">AI / Vision</button>
   </div>
-
   <div class="t-grid">
-    <!-- BACKEND -->
     <div class="t-item fu" data-cat="backend"><span class="ti-ico">⬡</span><span class="ti-nm">C# / .NET 8</span><span class="ti-cat">Backend</span><div class="ti-dots"><span class="ti-d f"></span><span class="ti-d f"></span><span class="ti-d f"></span><span class="ti-d f"></span><span class="ti-d f"></span></div></div>
     <div class="t-item fu" data-cat="backend"><span class="ti-ico">⬡</span><span class="ti-nm">Node.js</span><span class="ti-cat">Backend</span><div class="ti-dots"><span class="ti-d f"></span><span class="ti-d f"></span><span class="ti-d f"></span><span class="ti-d f"></span><span class="ti-d f"></span></div></div>
     <div class="t-item fu" data-cat="backend"><span class="ti-ico">⬡</span><span class="ti-nm">NestJS</span><span class="ti-cat">Backend</span><div class="ti-dots"><span class="ti-d f"></span><span class="ti-d f"></span><span class="ti-d f"></span><span class="ti-d f"></span><span class="ti-d"></span></div></div>
@@ -463,31 +557,26 @@ body.lang-en .t-en.bl{display:block}
     <div class="t-item fu" data-cat="backend"><span class="ti-ico">⬡</span><span class="ti-nm">Python</span><span class="ti-cat">Backend</span><div class="ti-dots"><span class="ti-d f"></span><span class="ti-d f"></span><span class="ti-d f"></span><span class="ti-d"></span><span class="ti-d"></span></div></div>
     <div class="t-item fu" data-cat="backend"><span class="ti-ico">⬡</span><span class="ti-nm">PHP / Laravel</span><span class="ti-cat">Backend</span><div class="ti-dots"><span class="ti-d f"></span><span class="ti-d f"></span><span class="ti-d f"></span><span class="ti-d"></span><span class="ti-d"></span></div></div>
     <div class="t-item fu" data-cat="backend"><span class="ti-ico">⬡</span><span class="ti-nm">Django</span><span class="ti-cat">Backend</span><div class="ti-dots"><span class="ti-d f"></span><span class="ti-d f"></span><span class="ti-d f"></span><span class="ti-d"></span><span class="ti-d"></span></div></div>
-    <!-- FRONTEND -->
     <div class="t-item fu" data-cat="frontend"><span class="ti-ico">◈</span><span class="ti-nm">React</span><span class="ti-cat">Frontend</span><div class="ti-dots"><span class="ti-d f"></span><span class="ti-d f"></span><span class="ti-d f"></span><span class="ti-d f"></span><span class="ti-d"></span></div></div>
     <div class="t-item fu" data-cat="frontend"><span class="ti-ico">◈</span><span class="ti-nm">Vue.js</span><span class="ti-cat">Frontend</span><div class="ti-dots"><span class="ti-d f"></span><span class="ti-d f"></span><span class="ti-d f"></span><span class="ti-d f"></span><span class="ti-d"></span></div></div>
     <div class="t-item fu" data-cat="frontend"><span class="ti-ico">◈</span><span class="ti-nm">Angular</span><span class="ti-cat">Frontend</span><div class="ti-dots"><span class="ti-d f"></span><span class="ti-d f"></span><span class="ti-d f"></span><span class="ti-d f"></span><span class="ti-d"></span></div></div>
     <div class="t-item fu" data-cat="frontend"><span class="ti-ico">◈</span><span class="ti-nm">Astro</span><span class="ti-cat">Frontend</span><div class="ti-dots"><span class="ti-d f"></span><span class="ti-d f"></span><span class="ti-d f"></span><span class="ti-d"></span><span class="ti-d"></span></div></div>
     <div class="t-item fu" data-cat="frontend"><span class="ti-ico">◈</span><span class="ti-nm">TypeScript</span><span class="ti-cat">Frontend</span><div class="ti-dots"><span class="ti-d f"></span><span class="ti-d f"></span><span class="ti-d f"></span><span class="ti-d f"></span><span class="ti-d"></span></div></div>
-    <!-- MOBILE -->
     <div class="t-item fu" data-cat="mobile"><span class="ti-ico">◎</span><span class="ti-nm">Flutter</span><span class="ti-cat">Mobile</span><div class="ti-dots"><span class="ti-d f"></span><span class="ti-d f"></span><span class="ti-d f"></span><span class="ti-d f"></span><span class="ti-d"></span></div></div>
     <div class="t-item fu" data-cat="mobile"><span class="ti-ico">◎</span><span class="ti-nm">Kotlin</span><span class="ti-cat">Mobile</span><div class="ti-dots"><span class="ti-d f"></span><span class="ti-d f"></span><span class="ti-d f"></span><span class="ti-d"></span><span class="ti-d"></span></div></div>
     <div class="t-item fu" data-cat="mobile"><span class="ti-ico">◎</span><span class="ti-nm">React Native</span><span class="ti-cat">Mobile</span><div class="ti-dots"><span class="ti-d f"></span><span class="ti-d f"></span><span class="ti-d f"></span><span class="ti-d"></span><span class="ti-d"></span></div></div>
-    <!-- CLOUD -->
     <div class="t-item fu" data-cat="cloud"><span class="ti-ico">⊕</span><span class="ti-nm">GCP</span><span class="ti-cat">Cloud</span><div class="ti-dots"><span class="ti-d f"></span><span class="ti-d f"></span><span class="ti-d f"></span><span class="ti-d f"></span><span class="ti-d"></span></div></div>
     <div class="t-item fu" data-cat="cloud"><span class="ti-ico">⊕</span><span class="ti-nm">Azure</span><span class="ti-cat">Cloud</span><div class="ti-dots"><span class="ti-d f"></span><span class="ti-d f"></span><span class="ti-d f"></span><span class="ti-d f"></span><span class="ti-d"></span></div></div>
     <div class="t-item fu" data-cat="cloud"><span class="ti-ico">⊕</span><span class="ti-nm">AWS</span><span class="ti-cat">Cloud</span><div class="ti-dots"><span class="ti-d f"></span><span class="ti-d f"></span><span class="ti-d f"></span><span class="ti-d"></span><span class="ti-d"></span></div></div>
     <div class="t-item fu" data-cat="cloud"><span class="ti-ico">⊕</span><span class="ti-nm">Docker</span><span class="ti-cat">Infra</span><div class="ti-dots"><span class="ti-d f"></span><span class="ti-d f"></span><span class="ti-d f"></span><span class="ti-d f"></span><span class="ti-d"></span></div></div>
     <div class="t-item fu" data-cat="cloud"><span class="ti-ico">⊕</span><span class="ti-nm">Kubernetes</span><span class="ti-cat">Infra</span><div class="ti-dots"><span class="ti-d f"></span><span class="ti-d f"></span><span class="ti-d f"></span><span class="ti-d"></span><span class="ti-d"></span></div></div>
     <div class="t-item fu" data-cat="cloud"><span class="ti-ico">⊕</span><span class="ti-nm">RabbitMQ</span><span class="ti-cat">Infra</span><div class="ti-dots"><span class="ti-d f"></span><span class="ti-d f"></span><span class="ti-d f"></span><span class="ti-d"></span><span class="ti-d"></span></div></div>
-    <!-- DB -->
     <div class="t-item fu" data-cat="db"><span class="ti-ico">▣</span><span class="ti-nm">PostgreSQL</span><span class="ti-cat">Database</span><div class="ti-dots"><span class="ti-d f"></span><span class="ti-d f"></span><span class="ti-d f"></span><span class="ti-d f"></span><span class="ti-d f"></span></div></div>
     <div class="t-item fu" data-cat="db"><span class="ti-ico">▣</span><span class="ti-nm">SQL Server</span><span class="ti-cat">Database</span><div class="ti-dots"><span class="ti-d f"></span><span class="ti-d f"></span><span class="ti-d f"></span><span class="ti-d f"></span><span class="ti-d"></span></div></div>
     <div class="t-item fu" data-cat="db"><span class="ti-ico">▣</span><span class="ti-nm">MySQL</span><span class="ti-cat">Database</span><div class="ti-dots"><span class="ti-d f"></span><span class="ti-d f"></span><span class="ti-d f"></span><span class="ti-d f"></span><span class="ti-d"></span></div></div>
     <div class="t-item fu" data-cat="db"><span class="ti-ico">▣</span><span class="ti-nm">MongoDB</span><span class="ti-cat">Database</span><div class="ti-dots"><span class="ti-d f"></span><span class="ti-d f"></span><span class="ti-d f"></span><span class="ti-d f"></span><span class="ti-d"></span></div></div>
     <div class="t-item fu" data-cat="db"><span class="ti-ico">▣</span><span class="ti-nm">Redis</span><span class="ti-cat">Database</span><div class="ti-dots"><span class="ti-d f"></span><span class="ti-d f"></span><span class="ti-d f"></span><span class="ti-d f"></span><span class="ti-d"></span></div></div>
     <div class="t-item fu" data-cat="db"><span class="ti-ico">▣</span><span class="ti-nm">DynamoDB</span><span class="ti-cat">Database</span><div class="ti-dots"><span class="ti-d f"></span><span class="ti-d f"></span><span class="ti-d f"></span><span class="ti-d"></span><span class="ti-d"></span></div></div>
-    <!-- ARCH -->
     <div class="t-item fu" data-cat="arch"><span class="ti-ico">⬢</span><span class="ti-nm">DDD</span><span class="ti-cat">Architecture</span><div class="ti-dots"><span class="ti-d f"></span><span class="ti-d f"></span><span class="ti-d f"></span><span class="ti-d f"></span><span class="ti-d f"></span></div></div>
     <div class="t-item fu" data-cat="arch"><span class="ti-ico">⬢</span><span class="ti-nm">Hexagonal Arch.</span><span class="ti-cat">Architecture</span><div class="ti-dots"><span class="ti-d f"></span><span class="ti-d f"></span><span class="ti-d f"></span><span class="ti-d f"></span><span class="ti-d f"></span></div></div>
     <div class="t-item fu" data-cat="arch"><span class="ti-ico">⬢</span><span class="ti-nm">CQRS</span><span class="ti-cat">Architecture</span><div class="ti-dots"><span class="ti-d f"></span><span class="ti-d f"></span><span class="ti-d f"></span><span class="ti-d f"></span><span class="ti-d f"></span></div></div>
@@ -496,7 +585,6 @@ body.lang-en .t-en.bl{display:block}
     <div class="t-item fu" data-cat="arch"><span class="ti-ico">⬢</span><span class="ti-nm">Event Sourcing</span><span class="ti-cat">Architecture</span><div class="ti-dots"><span class="ti-d f"></span><span class="ti-d f"></span><span class="ti-d f"></span><span class="ti-d f"></span><span class="ti-d"></span></div></div>
     <div class="t-item fu" data-cat="arch"><span class="ti-ico">⬢</span><span class="ti-nm">Clean Architecture</span><span class="ti-cat">Architecture</span><div class="ti-dots"><span class="ti-d f"></span><span class="ti-d f"></span><span class="ti-d f"></span><span class="ti-d f"></span><span class="ti-d"></span></div></div>
     <div class="t-item fu" data-cat="arch"><span class="ti-ico">⬢</span><span class="ti-nm">Wolverine / MediatR</span><span class="ti-cat">Architecture</span><div class="ti-dots"><span class="ti-d f"></span><span class="ti-d f"></span><span class="ti-d f"></span><span class="ti-d f"></span><span class="ti-d"></span></div></div>
-    <!-- AI -->
     <div class="t-item fu" data-cat="ai"><span class="ti-ico">◉</span><span class="ti-nm">Computer Vision</span><span class="ti-cat">AI / CV</span><div class="ti-dots"><span class="ti-d f"></span><span class="ti-d f"></span><span class="ti-d f"></span><span class="ti-d"></span><span class="ti-d"></span></div></div>
     <div class="t-item fu" data-cat="ai"><span class="ti-ico">◉</span><span class="ti-nm">OCR</span><span class="ti-cat">AI / CV</span><div class="ti-dots"><span class="ti-d f"></span><span class="ti-d f"></span><span class="ti-d f"></span><span class="ti-d"></span><span class="ti-d"></span></div></div>
     <div class="t-item fu" data-cat="ai"><span class="ti-ico">◉</span><span class="ti-nm">OpenCV</span><span class="ti-cat">AI / CV</span><div class="ti-dots"><span class="ti-d f"></span><span class="ti-d f"></span><span class="ti-d f"></span><span class="ti-d"></span><span class="ti-d"></span></div></div>
@@ -504,12 +592,166 @@ body.lang-en .t-en.bl{display:block}
   </div>
 </section>
 
-<!-- ══════════════ SKILLS ══════════════ -->
+<!-- ══ SERVICES ══ -->
+<section id="services">
+  <div class="s-hdr"><span class="s-num">05</span><h2 class="s-title"><span class="es">¿En qué puedo ayudarte?</span><span class="en">What can I build for you?</span></h2><div class="s-line"></div></div>
+
+  <div class="svc-intro">
+    <div class="svc-intro-left">
+      <h3 class="svc-tagline es">Si tienes un problema de negocio,<br>yo tengo la <em>arquitectura.</em></h3>
+      <h3 class="svc-tagline en">If you have a business problem,<br>I have the <em>architecture.</em></h3>
+    </div>
+    <div class="svc-intro-right">
+      <p class="svc-sub es">No solo escribo código — diseño sistemas completos desde la base de datos hasta la interfaz, pensados para escalar. Aquí hay ejemplos concretos de lo que puedo construir para tu empresa.</p>
+      <p class="svc-sub en">I don't just write code — I design complete systems from the database to the UI, built to scale. Here are concrete examples of what I can build for your business.</p>
+    </div>
+  </div>
+
+  <div class="svc-grid">
+    <div class="svc-card fu">
+      <span class="svc-ico">⬡</span>
+      <h3 class="svc-name es">Plataformas de Pagos & Fintech</h3>
+      <h3 class="svc-name en">Payments & Fintech Platforms</h3>
+      <p class="svc-desc es">Integro sistemas de pago con los rieles bancarios mexicanos e internacionales, con conciliación automática y auditoría completa de transacciones.</p>
+      <p class="svc-desc en">I integrate payment systems with Mexican and international banking rails, with automatic reconciliation and full transaction auditing.</p>
+      <div class="svc-examples">
+        <p class="svc-ex-lbl"><span class="es">// ejemplos</span><span class="en">// examples</span></p>
+        <div class="svc-ex-list">
+          <p class="svc-ex-item es">Integración STP/SPEI para transferencias en tiempo real</p>
+          <p class="svc-ex-item en">STP/SPEI integration for real-time transfers</p>
+          <p class="svc-ex-item es">Wallet digital con dispersión de fondos multi-cuenta</p>
+          <p class="svc-ex-item en">Digital wallet with multi-account fund disbursement</p>
+          <p class="svc-ex-item es">Facturación electrónica CFDI / DTE</p>
+          <p class="svc-ex-item en">Electronic invoicing CFDI / DTE</p>
+          <p class="svc-ex-item es">Dashboard de conciliación contable automatizada</p>
+          <p class="svc-ex-item en">Automated accounting reconciliation dashboard</p>
+        </div>
+      </div>
+    </div>
+    <div class="svc-card fu">
+      <span class="svc-ico">◈</span>
+      <h3 class="svc-name es">Sistemas de Gestión Empresarial</h3>
+      <h3 class="svc-name en">Business Management Systems</h3>
+      <p class="svc-desc es">Desarrollo plataformas SaaS a medida que reemplazan hojas de Excel o sistemas obsoletos, con módulos para cada área de la empresa.</p>
+      <p class="svc-desc en">I build custom SaaS platforms that replace spreadsheets or legacy systems, with modules tailored to each business area.</p>
+      <div class="svc-examples">
+        <p class="svc-ex-lbl"><span class="es">// ejemplos</span><span class="en">// examples</span></p>
+        <div class="svc-ex-list">
+          <p class="svc-ex-item es">ERP ligero para PyMEs con inventario, ventas y RRHH</p>
+          <p class="svc-ex-item en">Lightweight ERP for SMBs with inventory, sales and HR</p>
+          <p class="svc-ex-item es">Sistema de administración escolar (inscripciones, pagos, horarios)</p>
+          <p class="svc-ex-item en">School management system (enrollment, payments, schedules)</p>
+          <p class="svc-ex-item es">Plataforma de gestión de proyectos y recursos internos</p>
+          <p class="svc-ex-item en">Internal project and resource management platform</p>
+        </div>
+      </div>
+    </div>
+    <div class="svc-card fu">
+      <span class="svc-ico">◎</span>
+      <h3 class="svc-name es">Logística & Control de Flota</h3>
+      <h3 class="svc-name en">Logistics & Fleet Control</h3>
+      <p class="svc-desc es">Construyo sistemas de rastreo, geofencing y control operacional para empresas que mueven activos físicos — desde tractos hasta paquetes.</p>
+      <p class="svc-desc en">I build tracking, geofencing, and operational control systems for companies that move physical assets — from trucks to parcels.</p>
+      <div class="svc-examples">
+        <p class="svc-ex-lbl"><span class="es">// ejemplos</span><span class="en">// examples</span></p>
+        <div class="svc-ex-list">
+          <p class="svc-ex-item es">Control de entradas/salidas de tractos con OCR de placas</p>
+          <p class="svc-ex-item en">Truck entry/exit control with license plate OCR</p>
+          <p class="svc-ex-item es">Rastreo GPS en tiempo real con alertas de geocercas</p>
+          <p class="svc-ex-item en">Real-time GPS tracking with geofence alerts</p>
+          <p class="svc-ex-item es">Dashboard de operaciones para supervisores de patio</p>
+          <p class="svc-ex-item en">Operations dashboard for yard supervisors</p>
+          <p class="svc-ex-item es">Bitácora digital de viajes y rendición de cuentas</p>
+          <p class="svc-ex-item en">Digital travel log and accountability reports</p>
+        </div>
+      </div>
+    </div>
+    <div class="svc-card fu">
+      <span class="svc-ico">◉</span>
+      <h3 class="svc-name es">Visión Computacional & Automatización</h3>
+      <h3 class="svc-name en">Computer Vision & Automation</h3>
+      <p class="svc-desc es">Pipelines de visión artificial que eliminan tareas manuales repetitivas — lectura de documentos, detección de objetos, verificación automática.</p>
+      <p class="svc-desc en">Computer vision pipelines that eliminate repetitive manual tasks — document reading, object detection, automatic verification.</p>
+      <div class="svc-examples">
+        <p class="svc-ex-lbl"><span class="es">// ejemplos</span><span class="en">// examples</span></p>
+        <div class="svc-ex-list">
+          <p class="svc-ex-item es">OCR de documentos fiscales (facturas, pedimentos, cartaporte)</p>
+          <p class="svc-ex-item en">OCR for fiscal documents (invoices, customs, Bill of Lading)</p>
+          <p class="svc-ex-item es">Detección automática de placas vehiculares</p>
+          <p class="svc-ex-item en">Automatic vehicle license plate detection</p>
+          <p class="svc-ex-item es">Captura automática de formularios a base de datos</p>
+          <p class="svc-ex-item en">Automatic form-to-database capture</p>
+        </div>
+      </div>
+    </div>
+    <div class="svc-card fu">
+      <span class="svc-ico">⊕</span>
+      <h3 class="svc-name es">APIs & Integraciones</h3>
+      <h3 class="svc-name en">APIs & Integrations</h3>
+      <p class="svc-desc es">La capa que conecta tus sistemas actuales con servicios externos, plataformas de terceros o aplicaciones móviles.</p>
+      <p class="svc-desc en">The integration layer that connects your current systems with external services, third-party platforms, or mobile apps.</p>
+      <div class="svc-examples">
+        <p class="svc-ex-lbl"><span class="es">// ejemplos</span><span class="en">// examples</span></p>
+        <div class="svc-ex-list">
+          <p class="svc-ex-item es">API REST/gRPC para apps móviles con backend empresarial</p>
+          <p class="svc-ex-item en">REST/gRPC API connecting mobile apps to enterprise backend</p>
+          <p class="svc-ex-item es">Webhooks y event streaming entre sistemas heterogéneos</p>
+          <p class="svc-ex-item en">Webhooks and event streaming between heterogeneous systems</p>
+          <p class="svc-ex-item es">Integración con SAP, Salesforce, WhatsApp Business</p>
+          <p class="svc-ex-item en">Integration with SAP, Salesforce, WhatsApp Business</p>
+        </div>
+      </div>
+    </div>
+    <div class="svc-card fu">
+      <span class="svc-ico">⬢</span>
+      <h3 class="svc-name es">Arquitectura & Consultoría Técnica</h3>
+      <h3 class="svc-name en">Architecture & Technical Consulting</h3>
+      <p class="svc-desc es">Si tu sistema no escala, cuesta demasiado o es difícil de mantener — diagnóstico y plan de modernización realista.</p>
+      <p class="svc-desc en">If your system doesn't scale, costs too much, or is hard to maintain — diagnosis and a realistic modernization roadmap.</p>
+      <div class="svc-examples">
+        <p class="svc-ex-lbl"><span class="es">// ejemplos</span><span class="en">// examples</span></p>
+        <div class="svc-ex-list">
+          <p class="svc-ex-item es">Auditoría técnica y plan de migración a microservicios</p>
+          <p class="svc-ex-item en">Technical audit and monolith-to-microservices migration plan</p>
+          <p class="svc-ex-item es">Diseño de arquitectura para nuevo producto desde cero</p>
+          <p class="svc-ex-item en">Architecture design for a new product from scratch</p>
+          <p class="svc-ex-item es">Code review y definición de estándares de equipo</p>
+          <p class="svc-ex-item en">Code review and team engineering standards definition</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- CTA negro -->
+  <div class="svc-cta fu">
+    <div class="svc-cta-left">
+      <p class="svc-cta-eyebrow">// <span class="es">¿tienes algo en mente?</span><span class="en">got something in mind?</span></p>
+      <h3 class="svc-cta-title es">¿Tienes un proyecto en mente? Cuéntame el problema — te doy un diagnóstico honesto y una propuesta concreta.</h3>
+      <h3 class="svc-cta-title en">Got a project in mind? Tell me the problem — I'll give you an honest diagnosis and a concrete proposal.</h3>
+    </div>
+    <div class="svc-cta-right">
+      <a href="mailto:davidmorenoresendezisrael@gmail.com" class="btn-p">
+        <span class="es">Cuéntame tu problema</span><span class="en">Tell me your problem</span><span> →</span>
+      </a>
+      <p class="svc-cta-note es">Sin compromisos. Sin plantillas. Solo una conversación técnica honesta.</p>
+      <p class="svc-cta-note en">No commitments. No templates. Just an honest technical conversation.</p>
+    </div>
+  </div>
+
+  <div class="svc-industries">
+    <div class="svc-ind fu"><span class="svc-ind-ico">🚚</span><span class="svc-ind-name es">Logística & Transporte</span><span class="svc-ind-name en">Logistics & Transport</span><span class="svc-ind-desc es">Flota, rutas, control de patio, trazabilidad</span><span class="svc-ind-desc en">Fleet, routing, yard control, traceability</span></div>
+    <div class="svc-ind fu"><span class="svc-ind-ico">🏦</span><span class="svc-ind-name es">Fintech & Pagos</span><span class="svc-ind-name en">Fintech & Payments</span><span class="svc-ind-desc es">STP/SPEI, wallets, conciliación, CFDI</span><span class="svc-ind-desc en">STP/SPEI, wallets, reconciliation, billing</span></div>
+    <div class="svc-ind fu"><span class="svc-ind-ico">🏭</span><span class="svc-ind-name es">Manufactura & Operaciones</span><span class="svc-ind-name en">Manufacturing & Ops</span><span class="svc-ind-desc es">Inventario, producción, control de calidad</span><span class="svc-ind-desc en">Inventory, production, quality control</span></div>
+    <div class="svc-ind fu"><span class="svc-ind-ico">🎓</span><span class="svc-ind-name es">Educación & SaaS</span><span class="svc-ind-name en">Education & SaaS</span><span class="svc-ind-desc es">Plataformas, inscripciones, pagos, reportes</span><span class="svc-ind-desc en">Platforms, enrollment, payments, reporting</span></div>
+  </div>
+</section>
+
+<!-- ══ SKILLS ══ -->
 <section id="skills">
   <div class="sk-left">
-    <div class="s-hdr"><span class="s-num">05</span><h2 class="s-title">Stack</h2><div class="s-line"></div></div>
+    <div class="s-hdr"><span class="s-num">06</span><h2 class="s-title">Stack</h2><div class="s-line"></div></div>
     <div class="sk-cat">
-      <p class="sk-cat-lbl"><span class="t-es il">// arquitectura y patrones</span><span class="t-en il">// architecture & patterns</span></p>
+      <p class="sk-cat-lbl"><span class="es">// arquitectura y patrones</span><span class="en">// architecture & patterns</span></p>
       <div class="sk-bar"><div class="sk-bar-top"><span class="sk-bar-nm">DDD + Hexagonal Arch.</span><span class="sk-bar-pct">95%</span></div><div class="sk-track"><div class="sk-fill acc" style="--w:95%"></div></div></div>
       <div class="sk-bar"><div class="sk-bar-top"><span class="sk-bar-nm">CQRS + Event Sourcing</span><span class="sk-bar-pct">90%</span></div><div class="sk-track"><div class="sk-fill acc" style="--w:90%"></div></div></div>
       <div class="sk-bar"><div class="sk-bar-top"><span class="sk-bar-nm">Microservices / Sagas</span><span class="sk-bar-pct">88%</span></div><div class="sk-track"><div class="sk-fill acc" style="--w:88%"></div></div></div>
@@ -529,23 +771,25 @@ body.lang-en .t-en.bl{display:block}
     </div>
   </div>
   <div class="sk-right">
-    <div class="s-hdr"><span class="s-num">&nbsp;</span><h2 class="s-title"><span class="t-es il">Principios</span><span class="t-en il">Principles</span></h2><div class="s-line"></div></div>
+    <div class="s-hdr"><span class="s-num"></span><h2 class="s-title"><span class="es">Principios</span><span class="en">Principles</span></h2><div class="s-line"></div></div>
     <div class="pr-list">
-      <div class="pr-item fu"><span class="pr-n">I</span><p class="pr-t"><span class="t-es bl"><strong>Diseña para el fallo primero.</strong> Todo sistema va a fallar. La pregunta es si lo diseñaste para recuperarse con gracia o para arrastrarse todo consigo.</span><span class="t-en bl"><strong>Design for failure first.</strong> Every system will break. The question is whether you designed it to recover gracefully or to take everything down with it.</span></p></div>
-      <div class="pr-item fu"><span class="pr-n">II</span><p class="pr-t"><span class="t-es bl"><strong>Cuestiona supuestos, siempre.</strong> La mejor arquitectura viene de preguntar "¿por qué?" hasta que alguien se incomoda. El acuerdo complaciente es enemigo de la buena ingeniería.</span><span class="t-en bl"><strong>Challenge assumptions, always.</strong> The best architecture comes from asking "why" until someone gets uncomfortable. Compliant agreement is the enemy of good engineering.</span></p></div>
-      <div class="pr-item fu"><span class="pr-n">III</span><p class="pr-t"><span class="t-es bl"><strong>Los bounded contexts lo son todo.</strong> Si tu equipo no puede explicar dónde termina un servicio en 30 segundos, la arquitectura no está lista.</span><span class="t-en bl"><strong>Bounded contexts are everything.</strong> If your team can't explain where one service ends and another begins in 30 seconds, the architecture isn't done yet.</span></p></div>
-      <div class="pr-item fu"><span class="pr-n">IV</span><p class="pr-t"><span class="t-es bl"><strong>Entrega, luego itera.</strong> Los sistemas perfectos solo existen en diagramas. Los reales existen en producción, y producción te enseña cosas que ninguna pizarra puede.</span><span class="t-en bl"><strong>Ship, then iterate.</strong> Perfect systems only exist in diagrams. Real systems exist in production, and production teaches you things no whiteboard session can.</span></p></div>
+      <div class="pr-item fu"><span class="pr-n">I</span><div class="pr-t"><p class="es"><strong>Diseña para el fallo primero.</strong> Todo sistema va a fallar. La pregunta es si lo diseñaste para recuperarse con gracia o para arrastrarse todo consigo.</p><p class="en"><strong>Design for failure first.</strong> Every system will break. The question is whether you designed it to recover gracefully or to take everything down with it.</p></div></div>
+      <div class="pr-item fu"><span class="pr-n">II</span><div class="pr-t"><p class="es"><strong>Cuestiona supuestos, siempre.</strong> La mejor arquitectura viene de preguntar "¿por qué?" hasta que alguien se incomoda. El acuerdo complaciente es enemigo de la buena ingeniería.</p><p class="en"><strong>Challenge assumptions, always.</strong> The best architecture comes from asking "why" until someone gets uncomfortable. Compliant agreement is the enemy of good engineering.</p></div></div>
+      <div class="pr-item fu"><span class="pr-n">III</span><div class="pr-t"><p class="es"><strong>Los bounded contexts lo son todo.</strong> Si tu equipo no puede explicar dónde termina un servicio en 30 segundos, la arquitectura no está lista.</p><p class="en"><strong>Bounded contexts are everything.</strong> If your team can't explain where one service ends and another begins in 30 seconds, the architecture isn't done yet.</p></div></div>
+      <div class="pr-item fu"><span class="pr-n">IV</span><div class="pr-t"><p class="es"><strong>Entrega, luego itera.</strong> Los sistemas perfectos solo existen en diagramas. Los reales existen en producción, y producción te enseña cosas que ninguna pizarra puede.</p><p class="en"><strong>Ship, then iterate.</strong> Perfect systems only exist in diagrams. Real systems exist in production, and production teaches you things no whiteboard session can.</p></div></div>
     </div>
   </div>
 </section>
 
-<!-- ══════════════ CONTACT ══════════════ -->
+<!-- ══ CONTACT ══ -->
 <section id="contact">
   <div class="ct-left">
     <div>
-      <div class="s-hdr"><span class="s-num">06</span><h2 class="s-title"><span class="t-es il">Contacto</span><span class="t-en il">Contact</span></h2><div class="s-line"></div></div>
-      <h3 class="ct-head"><span class="t-es bl">Construyamos algo <em>que dure.</em></span><span class="t-en bl">Let's build something <em>that lasts.</em></span></h3>
-      <p class="ct-sub"><span class="t-es bl">Busco roles remotos internacionales de nivel senior / arquitecto. Si estás construyendo algo complejo y necesitas a alguien que cuestione cuando sea necesario — hablemos.</span><span class="t-en bl">Actively seeking senior / architect-level remote international roles. If you're building something complex and need someone who will push back when needed — let's talk.</span></p>
+      <div class="s-hdr"><span class="s-num">07</span><h2 class="s-title"><span class="es">Contacto</span><span class="en">Contact</span></h2><div class="s-line"></div></div>
+      <h3 class="ct-head es">Construyamos algo <em>que dure.</em></h3>
+      <h3 class="ct-head en">Let's build something <em>that lasts.</em></h3>
+      <p class="ct-sub es">Busco roles remotos internacionales de nivel senior / arquitecto. Si estás construyendo algo complejo y necesitas a alguien que cuestione cuando sea necesario — hablemos.</p>
+      <p class="ct-sub en">Actively seeking senior / architect-level remote international roles. If you're building something complex and need someone who will push back when needed — let's talk.</p>
     </div>
     <div class="ct-links">
       <a href="mailto:davidmorenoresendezisrael@gmail.com" class="ct-link"><span>✉ davidmorenoresendezisrael@gmail.com</span><span class="ct-arr">→</span></a>
@@ -556,11 +800,12 @@ body.lang-en .t-en.bl{display:block}
   <div class="ct-right">
     <div class="loc-blk fu"><span class="loc-lbl">// base</span><span class="loc-val">Monterrey, NL</span><span class="loc-sub">México · UTC-6 · Remote-first</span></div>
     <div class="av-blk fu">
-      <p class="av-lbl"><span class="t-es il">● Abierto a oportunidades</span><span class="t-en il">● Open to opportunities</span></p>
-      <p class="av-txt"><span class="t-es bl">Buscando roles de <strong>Senior Software Engineer</strong>, <strong>Solutions Architect</strong> y <strong>Tech Lead</strong> — preferiblemente remoto internacional. Inglés (B1) · Español (nativo).</span><span class="t-en bl">Targeting <strong>Senior Software Engineer</strong>, <strong>Solutions Architect</strong>, and <strong>Tech Lead</strong> roles — preferably remote international. English (B1) · Spanish (native).</span></p>
+      <p class="av-lbl"><span class="es">● Abierto a oportunidades</span><span class="en">● Open to opportunities</span></p>
+      <p class="av-txt es">Buscando roles de <strong>Senior Software Engineer</strong>, <strong>Solutions Architect</strong> y <strong>Tech Lead</strong> — preferiblemente remoto internacional. Inglés (B1) · Español (nativo).</p>
+      <p class="av-txt en">Targeting <strong>Senior Software Engineer</strong>, <strong>Solutions Architect</strong>, and <strong>Tech Lead</strong> roles — preferably remote international. English (B1) · Spanish (native).</p>
     </div>
     <div class="pref-blk fu">
-      <p class="pref-lbl"><span class="t-es il">// stack preferido para próximo rol</span><span class="t-en il">// preferred stack for next role</span></p>
+      <p class="pref-lbl"><span class="es">// stack preferido para próximo rol</span><span class="en">// preferred stack for next role</span></p>
       <div class="pref-tags">
         <span class="tag ta">.NET / C#</span><span class="tag tp">Event-driven</span>
         <span class="tag tp">GCP or AWS</span><span class="tag ta">Fintech/Logistics</span>
@@ -574,107 +819,110 @@ body.lang-en .t-en.bl{display:block}
 
 <footer>
   <span>David Israel Moreno Resendez © 2025</span>
-  <span><span class="t-es il">Diseñado desde cero — Monterrey, México</span><span class="t-en il">Designed from scratch — Monterrey, México</span></span>
-  <span>v3.0.0</span>
+  <span class="es">Diseñado desde cero — Monterrey, México</span>
+  <span class="en">Designed from scratch — Monterrey, México</span>
+  <span>v5.0.0</span>
 </footer>
 
 <script>
-// LANG
-let lang='es';
-function toggleLang(){
-  lang=lang==='es'?'en':'es';
-  document.getElementById('body').className='lang-'+lang;
-  document.documentElement.lang=lang;
-  document.getElementById('lf').textContent=lang==='es'?'🇺🇸':'🇲🇽';
-  document.getElementById('ll').textContent=lang==='es'?'EN':'ES';
-  document.title=lang==='es'?'David Israel Moreno — Arquitecto de Software':'David Israel Moreno — Software Architect';
+// LANG — toggle class on body, CSS does the rest
+let lang = 'es';
+function toggleLang() {
+  lang = lang === 'es' ? 'en' : 'es';
+  document.getElementById('body').className = 'lang-' + lang;
+  document.documentElement.lang = lang;
+  document.getElementById('lf').textContent = lang === 'es' ? '🇺🇸' : '🇲🇽';
+  document.getElementById('ll').textContent = lang === 'es' ? 'EN' : 'ES';
+  document.title = lang === 'es'
+    ? 'David Israel Moreno — Arquitecto de Software'
+    : 'David Israel Moreno — Software Architect';
 }
 
 // CURSOR
-const cur=document.getElementById('cur'),curR=document.getElementById('cur-r');
-let mx=0,my=0,rx=0,ry=0;
-document.addEventListener('mousemove',e=>{mx=e.clientX;my=e.clientY;cur.style.left=mx+'px';cur.style.top=my+'px';});
-(function loop(){rx+=(mx-rx)*.11;ry+=(my-ry)*.11;curR.style.left=rx+'px';curR.style.top=ry+'px';requestAnimationFrame(loop);})();
-document.querySelectorAll('a,button,.exp-row,.proj-card,.tag,.ct-link,.t-item').forEach(el=>{
-  el.addEventListener('mouseenter',()=>{cur.style.width='22px';cur.style.height='22px';curR.style.width='52px';curR.style.height='52px';curR.style.opacity='.25';});
-  el.addEventListener('mouseleave',()=>{cur.style.width='11px';cur.style.height='11px';curR.style.width='32px';curR.style.height='32px';curR.style.opacity='.45';});
+const cur = document.getElementById('cur'), curR = document.getElementById('cur-r');
+let mx=0, my=0, rx=0, ry=0;
+document.addEventListener('mousemove', e => { mx=e.clientX; my=e.clientY; cur.style.left=mx+'px'; cur.style.top=my+'px'; });
+(function loop(){ rx+=(mx-rx)*.11; ry+=(my-ry)*.11; curR.style.left=rx+'px'; curR.style.top=ry+'px'; requestAnimationFrame(loop); })();
+document.querySelectorAll('a,button,.exp-row,.proj-card,.tag,.ct-link,.t-item,.svc-card').forEach(el => {
+  el.addEventListener('mouseenter', () => { cur.style.width='22px'; cur.style.height='22px'; curR.style.width='52px'; curR.style.height='52px'; curR.style.opacity='.25'; });
+  el.addEventListener('mouseleave', () => { cur.style.width='11px'; cur.style.height='11px'; curR.style.width='32px'; curR.style.height='32px'; curR.style.opacity='.45'; });
 });
 
 // NAV SCROLL
-window.addEventListener('scroll',()=>document.getElementById('nav').classList.toggle('sc',scrollY>50));
+window.addEventListener('scroll', () => document.getElementById('nav').classList.toggle('sc', scrollY > 50));
 
 // ARCH DIAGRAM
-const nodes=[
+const nodes = [
   {id:'cli',lbl:'CLIENT',txt:'Flutter App',x:10,y:10},
   {id:'api',lbl:'API GATEWAY',txt:'.NET 8 / REST',x:160,y:10},
-  {id:'cmd',lbl:'COMMAND BUS',txt:'Wolverine',x:310,y:10},
+  {id:'cmd',lbl:'CMD BUS',txt:'Wolverine',x:310,y:10},
   {id:'saga',lbl:'SAGA',txt:'Orchestration',x:310,y:110},
   {id:'pay',lbl:'PAYMENTS',txt:'STP / SPEI',x:160,y:190},
   {id:'db',lbl:'STORE',txt:'PostgreSQL',x:310,y:210},
   {id:'evt',lbl:'EVENT BUS',txt:'Pub/Sub',x:10,y:130},
 ];
-const edges=[['cli','api'],['api','cmd'],['cmd','saga'],['saga','pay'],['saga','db'],['api','evt'],['evt','pay'],['pay','db']];
-const cont=document.getElementById('archNodes'),svgEl=document.getElementById('archSvg');
-nodes.forEach(n=>{
-  const el=document.createElement('div');
-  el.className='a-node';
-  el.innerHTML=`<span class="a-lbl">${n.lbl}</span>${n.txt}`;
-  el.style.left=n.x+'px';el.style.top=n.y+'px';el.id='nd-'+n.id;
+const edges = [['cli','api'],['api','cmd'],['cmd','saga'],['saga','pay'],['saga','db'],['api','evt'],['evt','pay'],['pay','db']];
+const cont = document.getElementById('archNodes'), svgEl = document.getElementById('archSvg');
+nodes.forEach(n => {
+  const el = document.createElement('div');
+  el.className = 'a-node';
+  el.innerHTML = `<span class="a-lbl">${n.lbl}</span>${n.txt}`;
+  el.style.left = n.x+'px'; el.style.top = n.y+'px'; el.id = 'nd-'+n.id;
   cont.appendChild(el);
 });
-setTimeout(()=>{
-  const m={};
-  nodes.forEach(n=>{const el=document.getElementById('nd-'+n.id);m[n.id]={cx:n.x+el.offsetWidth/2,cy:n.y+el.offsetHeight/2};});
-  edges.forEach(([a,b])=>{
-    const na=m[a],nb=m[b];
-    const ln=document.createElementNS('http://www.w3.org/2000/svg','line');
-    ln.setAttribute('x1',na.cx);ln.setAttribute('y1',na.cy);ln.setAttribute('x2',nb.cx);ln.setAttribute('y2',nb.cy);
-    ln.setAttribute('stroke','#0a0a0f');ln.setAttribute('stroke-width','1');ln.setAttribute('stroke-opacity','.2');ln.setAttribute('stroke-dasharray','3 4');
+setTimeout(() => {
+  const m = {};
+  nodes.forEach(n => { const el = document.getElementById('nd-'+n.id); m[n.id] = {cx: n.x+el.offsetWidth/2, cy: n.y+el.offsetHeight/2}; });
+  edges.forEach(([a,b]) => {
+    const na=m[a], nb=m[b];
+    const ln = document.createElementNS('http://www.w3.org/2000/svg','line');
+    ln.setAttribute('x1',na.cx); ln.setAttribute('y1',na.cy); ln.setAttribute('x2',nb.cx); ln.setAttribute('y2',nb.cy);
+    ln.setAttribute('stroke','#0a0a0f'); ln.setAttribute('stroke-width','1'); ln.setAttribute('stroke-opacity','.2'); ln.setAttribute('stroke-dasharray','3 4');
     svgEl.appendChild(ln);
-    const c=document.createElementNS('http://www.w3.org/2000/svg','circle');
-    c.setAttribute('r','2.5');c.setAttribute('fill','#c84b2f');
-    const am=document.createElementNS('http://www.w3.org/2000/svg','animateMotion');
-    am.setAttribute('dur',(1.6+Math.random()*1.8)+'s');am.setAttribute('repeatCount','indefinite');
+    const c = document.createElementNS('http://www.w3.org/2000/svg','circle');
+    c.setAttribute('r','2.5'); c.setAttribute('fill','#c84b2f');
+    const am = document.createElementNS('http://www.w3.org/2000/svg','animateMotion');
+    am.setAttribute('dur',(1.6+Math.random()*1.8)+'s'); am.setAttribute('repeatCount','indefinite');
     am.setAttribute('path',`M${na.cx},${na.cy} L${nb.cx},${nb.cy}`);
-    c.appendChild(am);svgEl.appendChild(c);
+    c.appendChild(am); svgEl.appendChild(c);
   });
-},120);
+}, 120);
 
 // COUNTERS
-function animCtrs(){
-  document.querySelectorAll('[data-count]').forEach(el=>{
-    const t=parseInt(el.dataset.count);let c=0;
-    const iv=setInterval(()=>{c+=t/40;if(c>=t){c=t;clearInterval(iv);}el.textContent=Math.floor(c)+'+';},28);
+function animCtrs() {
+  document.querySelectorAll('[data-count]').forEach(el => {
+    const t = parseInt(el.dataset.count); let c = 0;
+    const iv = setInterval(() => { c+=t/40; if(c>=t){c=t;clearInterval(iv);} el.textContent=Math.floor(c)+'+'; }, 28);
   });
 }
 
 // INTERSECTION OBSERVER
-const obs=new IntersectionObserver(entries=>entries.forEach(e=>{
-  if(e.isIntersecting){
+const obs = new IntersectionObserver(entries => entries.forEach(e => {
+  if (e.isIntersecting) {
     e.target.classList.add('vis');
-    if(e.target.closest('#skills'))document.querySelectorAll('.sk-fill').forEach(b=>b.classList.add('animate'));
+    if (e.target.closest('#skills')) document.querySelectorAll('.sk-fill').forEach(b => b.classList.add('animate'));
   }
-}),{threshold:.1});
-document.querySelectorAll('.fu').forEach(el=>obs.observe(el));
-new IntersectionObserver(entries=>entries.forEach(e=>{if(e.isIntersecting)animCtrs();}),{threshold:.4}).observe(document.getElementById('hero'));
+}), {threshold: .1});
+document.querySelectorAll('.fu').forEach(el => obs.observe(el));
+new IntersectionObserver(entries => entries.forEach(e => { if(e.isIntersecting) animCtrs(); }), {threshold:.4}).observe(document.getElementById('hero'));
 
 // TECH FILTER
-document.querySelectorAll('.tf-btn').forEach(btn=>{
-  btn.addEventListener('click',()=>{
-    document.querySelectorAll('.tf-btn').forEach(b=>b.classList.remove('active'));
+document.querySelectorAll('.tf-btn').forEach(btn => {
+  btn.addEventListener('click', () => {
+    document.querySelectorAll('.tf-btn').forEach(b => b.classList.remove('active'));
     btn.classList.add('active');
-    const cat=btn.dataset.cat;
-    document.querySelectorAll('.t-item').forEach(item=>{
-      item.classList.toggle('gone', cat!=='all' && item.dataset.cat!==cat);
+    const cat = btn.dataset.cat;
+    document.querySelectorAll('.t-item').forEach(item => {
+      item.classList.toggle('gone', cat !== 'all' && item.dataset.cat !== cat);
     });
   });
 });
 
 // HERO ENTRANCE
-const hl=document.querySelector('.h-left'),hr=document.querySelector('.h-right');
-hl.style.opacity='0';hr.style.opacity='0';
-setTimeout(()=>{hl.style.transition='opacity .75s ease';hl.style.opacity='1';},180);
-setTimeout(()=>{hr.style.transition='opacity .75s ease';hr.style.opacity='1';},380);
+const hl = document.querySelector('.h-left'), hr = document.querySelector('.h-right');
+hl.style.opacity='0'; hr.style.opacity='0';
+setTimeout(() => { hl.style.transition='opacity .75s ease'; hl.style.opacity='1'; }, 180);
+setTimeout(() => { hr.style.transition='opacity .75s ease'; hr.style.opacity='1'; }, 380);
 </script>
 </body>
 </html>
