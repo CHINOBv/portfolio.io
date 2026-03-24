@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>David Israel Moreno — Arquitecto de Software [D: Psico-Optimizada]</title>
+<title>David Israel Moreno — Arquitecto de Software [W]</title>
 
 <!-- Open Graph / LinkedIn / WhatsApp -->
 <meta property="og:type" content="website">
@@ -23,16 +23,16 @@
 <meta name="author" content="David Israel Moreno Resendez">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Playfair+Display:ital,wght@0,700;0,800;0,900;1,700;1,900&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,700;0,9..144,800;0,9..144,900;1,9..144,700;1,9..144,900&family=Poppins:ital,wght@0,400;0,600;0,700;0,800;0,900;1,400;1,700&family=Nunito+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400;1,600&family=IBM+Plex+Mono:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&display=swap" rel="stylesheet">
 <style>
 *,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
 :root{
   --ink:#0a0a0f;--paper:#f2efe8;--rust:#c84b2f;--amber:#d4821a;
   --grid:#e8e4db;--avail:#1a6b3a;
-  --mono:'IBM Plex Mono',monospace;--serif:'Playfair Display',serif;--sans:'Outfit',sans-serif;
+  --mono:'IBM Plex Mono',monospace;--serif:'Fraunces',serif;--sans:'Poppins',sans-serif;--body:'Nunito Sans',sans-serif;
 }
 html{scroll-behavior:smooth}
-body{background:var(--paper);color:var(--ink);font-family:var(--mono);overflow-x:hidden;cursor:none}
+body{background:var(--paper);color:var(--ink);font-family:var(--body);overflow-x:hidden;cursor:none}
 .grid-bg{position:fixed;inset:0;background-image:linear-gradient(var(--grid) 1px,transparent 1px),linear-gradient(90deg,var(--grid) 1px,transparent 1px);background-size:48px 48px;z-index:0;pointer-events:none}
 .noise{position:fixed;inset:0;opacity:.02;z-index:1;pointer-events:none;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");background-size:200px}
 #cur{position:fixed;width:11px;height:11px;background:var(--rust);border-radius:50%;pointer-events:none;z-index:9999;transform:translate(-50%,-50%);mix-blend-mode:multiply;transition:width .18s,height .18s}
@@ -45,90 +45,72 @@ main{position:relative;z-index:2}
 
 /* NAV */
 nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:18px 48px;border-bottom:1px solid transparent;transition:border-color .3s,background .3s}
-nav.sc{border-color:var(--ink);background:rgba(242,239,232,.96);backdrop-filter:blur(12px)}
-.n-logo{font-family:var(--sans);font-weight:800;font-size:15px;letter-spacing:.06em;text-transform:uppercase}
+nav.sc{border-color:var(--ink);background:rgba(242,239,232,.94);backdrop-filter:blur(12px)}
+.n-logo{font-family:var(--sans);font-weight:800;font-size:15px;letter-spacing:.05em;text-transform:uppercase}
 .n-logo span{color:var(--rust)}
 .n-links{display:flex;gap:28px;list-style:none}
-.n-links a{font-size:12px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink);text-decoration:none;opacity:.65;transition:opacity .2s;font-weight:500}
+.n-links a{font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--ink);text-decoration:none;opacity:.65;transition:opacity .2s;font-family:var(--sans);font-weight:600}
 .n-links a:hover{opacity:1}
 .n-right{display:flex;align-items:center;gap:12px}
-.n-av{display:flex;align-items:center;gap:6px;font-size:11px;letter-spacing:.06em;color:var(--avail);font-family:var(--sans);font-weight:600}
+.n-av{display:flex;align-items:center;gap:6px;font-size:12px;letter-spacing:.05em;color:var(--avail);font-family:var(--sans);font-weight:600}
 .sdot{width:6px;height:6px;background:var(--avail);border-radius:50%;animation:pd 2s infinite}
 @keyframes pd{0%,100%{opacity:1;transform:scale(1)}50%{opacity:.4;transform:scale(.8)}}
-.lbtn{background:none;border:1.5px solid var(--ink);font-family:var(--sans);font-size:11px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;cursor:none;padding:6px 12px;color:var(--ink);transition:background .2s,color .2s;display:flex;align-items:center;gap:5px}
+.lbtn{background:none;border:1.5px solid var(--ink);font-family:var(--sans);font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;cursor:none;padding:6px 12px;color:var(--ink);transition:background .2s,color .2s;display:flex;align-items:center;gap:5px}
 .lbtn:hover{background:var(--ink);color:var(--paper)}
 
 /* HERO */
 #hero{min-height:100vh;display:grid;grid-template-columns:1fr 1fr;border-bottom:1px solid var(--ink)}
 .h-left{padding:110px 0 72px 48px;border-right:1px solid var(--ink);display:flex;flex-direction:column;justify-content:flex-end;position:relative}
-/* h-tag: de 10px/.2em a 12px — la etiqueta de contexto debe leerse sin esfuerzo */
-.h-tag{font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--rust);margin-bottom:22px;font-family:var(--sans);font-weight:600;opacity:1}
-/* h-name: Playfair 900 en lugar de DM Serif — más dramático, ancla visual más fuerte */
-.h-name{font-family:var(--serif);font-size:clamp(62px,7.2vw,114px);line-height:.88;letter-spacing:-.02em;font-weight:900}
+.h-tag{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--rust);margin-bottom:22px;font-family:var(--sans);font-weight:600}
+.h-name{font-family:var(--serif);font-size:clamp(64px,7.4vw,116px);line-height:.86;letter-spacing:-.02em;font-weight:900}
 .h-name em{font-style:italic;color:var(--rust);display:block}
-/* h-role: weight 800 + opacidad .7 — no .5, los logros no se murmuran */
-.h-role{font-family:var(--sans);font-weight:800;font-size:clamp(13px,1.5vw,18px);letter-spacing:.06em;text-transform:uppercase;opacity:.7;margin-top:24px}
-/* h-desc: 15px + line-height 1.9 + opacidad .78 — cuerpo legible y presente */
-.h-desc{font-size:15px;line-height:1.9;max-width:430px;opacity:.78;margin-top:20px;font-family:var(--sans);font-weight:400}
-.h-cta{margin-top:40px;display:flex;gap:14px;align-items:center}
-/* btn-p: 12px + font sans weight 700 — CTA principal debe hablar, no susurrar */
-.btn-p{display:inline-flex;align-items:center;gap:8px;background:var(--ink);color:var(--paper);padding:13px 26px;font-family:var(--sans);font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;text-decoration:none;border:1.5px solid var(--ink);position:relative;overflow:hidden}
+.h-role{font-family:var(--sans);font-weight:800;font-size:clamp(12px,1.4vw,17px);letter-spacing:.07em;text-transform:uppercase;opacity:.72;margin-top:24px}
+.h-desc{font-family:var(--body);font-size:15px;line-height:1.95;max-width:430px;opacity:.78;margin-top:20px}
+.h-cta{margin-top:38px;display:flex;gap:14px;align-items:center}
+.btn-p{display:inline-flex;align-items:center;gap:8px;background:var(--ink);color:var(--paper);padding:13px 26px;font-family:var(--sans);font-size:12px;font-weight:700;letter-spacing:.09em;text-transform:uppercase;text-decoration:none;border:1.5px solid var(--ink);position:relative;overflow:hidden}
 .btn-p::before{content:'';position:absolute;bottom:0;left:0;width:100%;height:0;background:var(--rust);transition:height .24s;z-index:0}
 .btn-p:hover::before{height:100%}
 .btn-p span{position:relative;z-index:1}
-/* btn-g: 12px — link secundario legible */
-.btn-g{font-family:var(--sans);font-size:12px;font-weight:600;letter-spacing:.1em;text-transform:uppercase;color:var(--ink);text-decoration:none;border-bottom:1.5px solid var(--ink);padding-bottom:2px;transition:color .2s,border-color .2s}
+.btn-g{font-family:var(--sans);font-size:12px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:var(--ink);text-decoration:none;border-bottom:1.5px solid var(--ink);padding-bottom:2px;transition:color .2s,border-color .2s}
 .btn-g:hover{color:var(--rust);border-color:var(--rust)}
-/* scroll indicator: opacidad .5 — debe ser legible, no fantasmal */
-.h-scroll{position:absolute;bottom:36px;left:48px;display:flex;align-items:center;gap:10px;font-size:10px;letter-spacing:.18em;text-transform:uppercase;opacity:.5;font-family:var(--sans);font-weight:500}
+.h-scroll{position:absolute;bottom:36px;left:48px;display:flex;align-items:center;gap:10px;font-size:10px;letter-spacing:.16em;text-transform:uppercase;opacity:.5;font-family:var(--sans);font-weight:500}
 .h-sline{width:36px;height:1px;background:var(--ink);position:relative;overflow:hidden}
 .h-sline::after{content:'';position:absolute;top:0;left:-100%;width:100%;height:100%;background:var(--rust);animation:sa 2s ease infinite}
 @keyframes sa{0%{left:-100%}100%{left:100%}}
 .h-right{padding:110px 48px 72px;display:flex;flex-direction:column;justify-content:center}
-/* arch-title: 11px sans — labels del diagrama presentes */
-.arch-title{font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--rust);margin-bottom:16px;font-family:var(--sans);font-weight:600}
+.arch-title{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--rust);margin-bottom:16px;font-family:var(--sans);font-weight:600}
 .arch-nodes{position:relative;height:290px;max-width:460px}
 .arch-svg{position:absolute;inset:0;pointer-events:none}
-/* nodos: 11px — el arquitecto muestra sus sistemas con claridad */
 .a-node{position:absolute;border:1px solid var(--ink);background:var(--paper);padding:9px 13px;font-size:11px;font-family:var(--mono);font-weight:500;letter-spacing:.03em;white-space:nowrap;transition:background .2s,color .2s;cursor:default}
 .a-node:hover{background:var(--ink);color:var(--paper)}
-/* a-lbl: 10px weight 700 — las labels de tipo son la señal de competencia */
 .a-node .a-lbl{display:block;font-weight:700;font-size:10px;color:var(--rust);margin-bottom:2px}
 .a-node:hover .a-lbl{color:var(--amber)}
 .h-metrics{display:grid;grid-template-columns:repeat(3,1fr);border:1px solid var(--ink);margin-top:36px;max-width:460px}
-.metric{padding:20px;border-right:1px solid var(--ink)}
+.metric{padding:18px;border-right:1px solid var(--ink)}
 .metric:last-child{border-right:none}
-/* m-val: Playfair 900 a 44px — ESTOS números son la prueba social más fuerte, deben dominar */
 .m-val{font-family:var(--serif);font-size:44px;font-weight:900;line-height:1;color:var(--rust);display:block}
-/* m-lbl: 10px .6 — mínimo para ser legible sin robarle protagonismo al número */
 .m-lbl{font-size:10px;letter-spacing:.1em;text-transform:uppercase;opacity:.6;margin-top:5px;display:block;font-family:var(--sans);font-weight:500}
 
 /* SECTION COMMONS */
 section{position:relative;z-index:2}
 .s-hdr{display:flex;align-items:baseline;gap:16px;margin-bottom:52px}
-/* s-num: 13px sans 600 — el número de sección es orientación, debe leerse */
-.s-num{font-size:13px;color:var(--rust);letter-spacing:.08em;font-family:var(--sans);font-weight:600}
-/* s-title: Playfair 900, clamp grande — los títulos de sección son el mapa del portfolio */
-.s-title{font-family:var(--serif);font-size:clamp(34px,4.4vw,56px);line-height:1;font-weight:900}
-.s-line{flex:1;height:1px;background:var(--ink);opacity:.15;margin-left:10px}
+.s-num{font-size:13px;color:var(--rust);letter-spacing:.07em;font-family:var(--sans);font-weight:600}
+.s-title{font-family:var(--serif);font-size:clamp(36px,4.6vw,58px);line-height:1;font-weight:900}
+.s-line{flex:1;height:1px;background:var(--ink);opacity:.12;margin-left:10px}
 
 /* ABOUT */
 #about{display:grid;grid-template-columns:1fr 1fr;border-top:1px solid var(--ink)}
 .ab-left{padding:72px 48px;border-right:1px solid var(--ink)}
 .ab-right{padding:72px 48px}
-/* ab-text: 15px sans + line-height 1.95 + opacidad .78 — el about es lo primero que leerán */
-.ab-text{font-size:15px;line-height:1.95;opacity:.78;max-width:490px;font-family:var(--sans);font-weight:400}
+.ab-text{font-family:var(--body);font-size:15px;line-height:1.95;opacity:.78;max-width:490px}
 .ab-text strong{color:var(--rust);font-weight:700;opacity:1}
 .ab-stack{margin-top:44px}
-/* s-lbl: 11px sans 600 — los labels de sección deben orientar, no esconderse */
-.s-lbl{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--rust);margin-bottom:14px;font-family:var(--sans);font-weight:600}
+.s-lbl{font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--rust);margin-bottom:14px;font-family:var(--sans);font-weight:600}
 .s-tags{display:flex;flex-wrap:wrap;gap:7px}
-/* tags: 11px mono — las tecnologías son datos, deben leerse de un vistazo */
-.tag{padding:6px 12px;border:1px solid;font-size:11px;font-family:var(--mono);font-weight:500;letter-spacing:.06em;text-transform:uppercase;transition:background .2s,color .2s;cursor:default}
+.tag{padding:6px 12px;border:1px solid;font-size:11px;font-family:var(--mono);font-weight:500;letter-spacing:.05em;text-transform:uppercase;transition:background .2s,color .2s;cursor:default}
 .tp{border-color:var(--ink);color:var(--ink)}.ta{border-color:var(--rust);color:var(--rust)}
 .tag:hover{background:var(--ink);color:var(--paper);border-color:var(--ink)}
-/* terminal: IBM Plex Mono 13px — la terminal es un artefacto de identidad, debe respirar */
-.terminal{background:var(--ink);color:#a8d4a8;font-family:var(--mono);font-size:13px;line-height:1.85;border:1px solid var(--ink);overflow:hidden}
+.terminal{background:var(--ink);color:#a8d4a8;font-family:var(--mono);font-size:13px;line-height:1.88;border:1px solid var(--ink);overflow:hidden}
 .t-bar{background:#1a1a26;padding:9px 14px;display:flex;align-items:center;gap:7px;border-bottom:1px solid #2a2a3a}
 .td{width:9px;height:9px;border-radius:50%}
 .t-title{color:#444;font-size:10px;margin-left:6px}
@@ -141,59 +123,47 @@ section{position:relative;z-index:2}
 /* EXPERIENCE */
 #experience{padding:72px 48px;border-top:1px solid var(--ink)}
 .exp-list{display:flex;flex-direction:column;border:1px solid var(--ink)}
-.exp-row{display:grid;grid-template-columns:200px 1fr 140px;border-bottom:1px solid var(--ink);transition:background .2s;cursor:default}
+.exp-row{display:grid;grid-template-columns:190px 1fr 130px;border-bottom:1px solid var(--ink);transition:background .2s;cursor:default}
 .exp-row:last-child{border-bottom:none}
 .exp-row:hover{background:var(--ink);color:var(--paper)}
-/* exp-co: Outfit 700 15px — el nombre de la empresa es la primera señal de credibilidad */
 .exp-co{padding:28px 30px;border-right:1px solid var(--ink);font-family:var(--sans);font-weight:700;font-size:15px;display:flex;flex-direction:column;justify-content:center;gap:6px}
 .exp-row:hover .exp-co{border-right-color:rgba(255,255,255,.1)}
-/* exp-etag: 10px — el tipo de rol (fulltime/freelance) debe leerse claramente */
-.exp-etag{font-size:10px;letter-spacing:.1em;text-transform:uppercase;border:1px solid var(--ink);padding:3px 8px;color:var(--rust);font-family:var(--mono);font-weight:500;width:fit-content}
+.exp-etag{font-size:10px;letter-spacing:.08em;text-transform:uppercase;border:1px solid var(--ink);padding:3px 8px;color:var(--rust);font-family:var(--mono);font-weight:500;width:fit-content}
 .exp-row:hover .exp-etag{color:var(--amber);border-color:rgba(255,255,255,.2)}
-.exp-main{padding:28px 30px}
-/* exp-role: Playfair 700 23px — el rol es la línea de mayor valor en el CV */
-.exp-role{font-family:var(--serif);font-size:23px;font-weight:700;margin-bottom:8px}
-/* exp-desc: 13px sans .72 — descripción presente y legible */
-.exp-desc{font-size:13px;line-height:1.78;opacity:.72;max-width:580px;font-family:var(--sans)}
-.exp-row:hover .exp-desc{opacity:.82}
-/* exp-tech: 11px .7 — el stack usado es info de alta relevancia para el reclutador técnico */
-.exp-tech{font-size:11px;color:var(--rust);font-family:var(--mono);font-weight:500;margin-top:10px;letter-spacing:.03em;opacity:.85}
+.exp-main{padding:26px 28px}
+.exp-role{font-family:var(--serif);font-size:22px;font-weight:700;margin-bottom:8px}
+.exp-desc{font-family:var(--body);font-size:13.5px;line-height:1.8;opacity:.74;max-width:580px}
+.exp-row:hover .exp-desc{opacity:.68}
+.exp-tech{font-size:11px;color:var(--rust);font-family:var(--mono);font-weight:500;margin-top:10px;letter-spacing:.03em;opacity:.9}
 .exp-row:hover .exp-tech{color:var(--amber)}
-.exp-r{padding:28px 30px;display:flex;flex-direction:column;justify-content:center;align-items:flex-end;gap:6px;border-left:1px solid var(--ink)}
+.exp-r{padding:26px 28px;display:flex;flex-direction:column;justify-content:center;align-items:flex-end;gap:6px;border-left:1px solid var(--ink)}
 .exp-row:hover .exp-r{border-left-color:rgba(255,255,255,.1)}
-/* exp-date: 11px .55 — la fecha importa pero no compite con el rol */
 .exp-date{font-size:11px;opacity:.55;font-family:var(--mono);text-align:right}
-.exp-arr{font-size:16px;opacity:.2;transition:opacity .2s,transform .2s}
-.exp-row:hover .exp-arr{opacity:.75;transform:translateX(4px)}
+.exp-arr{font-size:16px;opacity:.18;transition:opacity .2s,transform .2s}
+.exp-row:hover .exp-arr{opacity:.7;transform:translateX(4px)}
 
 /* PROJECTS */
 #projects{border-top:1px solid var(--ink);padding:72px 48px}
 .proj-grid{display:grid;grid-template-columns:repeat(2,1fr);border:1px solid var(--ink)}
-.proj-card{padding:40px 34px;border-right:1px solid var(--ink);border-bottom:1px solid var(--ink);position:relative;overflow:hidden;transition:background .25s;cursor:default}
+.proj-card{padding:38px 32px;border-right:1px solid var(--ink);border-bottom:1px solid var(--ink);position:relative;overflow:hidden;transition:background .25s;cursor:default}
 .proj-card:nth-child(even){border-right:none}
 .proj-card:nth-last-child(-n+2){border-bottom:none}
 .proj-card::before{content:'';position:absolute;bottom:0;left:0;width:100%;height:3px;background:var(--rust);transform:scaleX(0);transform-origin:left;transition:transform .28s}
 .proj-card:hover::before{transform:scaleX(1)}
 .proj-card:hover{background:rgba(200,75,47,.035)}
-/* p-num: 11px — número de proyecto como orientación espacial */
-.p-num{font-size:11px;color:var(--rust);letter-spacing:.14em;font-family:var(--mono);margin-bottom:16px;opacity:.65}
-.p-icon{font-size:30px;margin-bottom:16px;display:block}
-/* p-name: Outfit 800 19px — el título del proyecto es lo que el reclutador escanea primero */
+.p-num{font-size:11px;color:var(--rust);letter-spacing:.12em;font-family:var(--mono);margin-bottom:16px;opacity:.65}
+.p-icon{font-size:28px;margin-bottom:16px;display:block}
 .p-name{font-family:var(--sans);font-weight:800;font-size:19px;margin-bottom:10px;line-height:1.15}
-/* p-desc: 13px sans .72 — descripción presente y accesible */
-.p-desc{font-size:13px;line-height:1.82;opacity:.72;margin-bottom:20px;font-family:var(--sans)}
+.p-desc{font-family:var(--body);font-size:13.5px;line-height:1.85;opacity:.74;margin-bottom:20px}
 .p-tags{display:flex;flex-wrap:wrap;gap:5px;margin-bottom:22px}
-/* p-tag: 10px — los tags técnicos deben leerse sin esfuerzo */
-.p-tag{font-size:10px;font-family:var(--mono);font-weight:500;letter-spacing:.08em;text-transform:uppercase;padding:4px 8px;background:rgba(200,75,47,.09);color:var(--rust);border:1px solid rgba(200,75,47,.3)}
-/* p-link: 11px .5 — el link existe, se puede encontrar */
-.p-link{font-size:11px;letter-spacing:.1em;text-transform:uppercase;color:var(--ink);text-decoration:none;font-family:var(--sans);font-weight:600;display:inline-flex;align-items:center;gap:6px;opacity:.5;transition:opacity .2s,color .2s}
+.p-tag{font-size:10px;font-family:var(--mono);font-weight:500;letter-spacing:.07em;text-transform:uppercase;padding:4px 8px;background:rgba(200,75,47,.09);color:var(--rust);border:1px solid rgba(200,75,47,.3)}
+.p-link{font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--ink);text-decoration:none;font-family:var(--sans);font-weight:600;display:inline-flex;align-items:center;gap:6px;opacity:.5;transition:opacity .2s,color .2s}
 .proj-card:hover .p-link{opacity:1;color:var(--rust)}
 
 /* TECH STACK */
 #tech{border-top:1px solid var(--ink);padding:72px 48px}
 .tf-bar{display:flex;flex-wrap:wrap;gap:7px;margin-bottom:44px;padding-bottom:28px;border-bottom:1px solid rgba(0,0,0,.1)}
-/* tf-btn: Outfit 11px .55 → 1 — los filtros deben invitar a interactuar */
-.tf-btn{background:none;border:1px solid rgba(0,0,0,.2);font-family:var(--sans);font-size:11px;font-weight:600;letter-spacing:.08em;text-transform:uppercase;cursor:none;padding:8px 15px;color:var(--ink);transition:background .2s,color .2s,border-color .2s,opacity .2s;opacity:.55}
+.tf-btn{background:none;border:1px solid rgba(0,0,0,.2);font-family:var(--sans);font-size:11px;font-weight:600;letter-spacing:.07em;text-transform:uppercase;cursor:none;padding:8px 15px;color:var(--ink);transition:background .2s,color .2s,border-color .2s,opacity .2s;opacity:.55}
 .tf-btn:hover{border-color:var(--ink);opacity:1}
 .tf-btn.active{background:var(--ink);color:var(--paper);border-color:var(--ink);opacity:1}
 .t-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(172px,1fr));border:1px solid var(--ink)}
@@ -202,14 +172,12 @@ section{position:relative;z-index:2}
 .t-item:hover::before{height:100%}
 .t-item:hover{background:rgba(200,75,47,.04)}
 .t-item.gone{display:none}
-.ti-ico{font-size:11px;color:var(--rust);opacity:.55;margin-bottom:3px}
-/* ti-nm: Outfit 700 14px — el nombre de la tecnología es lo que el scanner busca */
+.ti-ico{font-size:10px;color:var(--rust);opacity:.45;margin-bottom:3px}
 .ti-nm{font-family:var(--sans);font-weight:700;font-size:14px;line-height:1.2}
-/* ti-cat: mono 10px .45 — categoría: contexto, no protagonista */
-.ti-cat{font-size:10px;letter-spacing:.1em;text-transform:uppercase;opacity:.45;font-family:var(--mono);margin-top:1px}
+.ti-cat{font-size:10px;letter-spacing:.09em;text-transform:uppercase;opacity:.45;font-family:var(--mono);margin-top:1px}
 .ti-dots{display:flex;gap:3px;margin-top:9px}
 .ti-d{width:5px;height:5px;border-radius:50%;border:1px solid rgba(10,10,15,.3);opacity:.28}
-.ti-d.f{background:var(--rust);border-color:var(--rust);opacity:.8}
+.ti-d.f{background:var(--rust);border-color:var(--rust);opacity:.75}
 .t-item:hover .ti-d.f{opacity:1}
 
 /* SERVICES */
@@ -217,68 +185,55 @@ section{position:relative;z-index:2}
 .svc-intro{display:grid;grid-template-columns:1fr 1fr;border:1px solid var(--ink);margin-bottom:0}
 .svc-intro-left{padding:40px;border-right:1px solid var(--ink)}
 .svc-intro-right{padding:40px;display:flex;align-items:center}
-/* svc-tagline: Playfair 900 — la promesa de valor debe tener peso */
-.svc-tagline{font-family:var(--serif);font-size:clamp(24px,2.9vw,40px);line-height:1.08;font-weight:900}
+.svc-tagline{font-family:var(--serif);font-size:clamp(22px,2.8vw,38px);line-height:1.1}
 .svc-tagline em{font-style:italic;color:var(--rust)}
-/* svc-sub: 14px sans .72 — texto de apoyo que se lee sin fricción */
-.svc-sub{font-size:14px;line-height:1.9;opacity:.72;font-family:var(--sans)}
+.svc-sub{font-family:var(--body);font-size:14px;line-height:1.92;opacity:.74}
 .svc-grid{display:grid;grid-template-columns:repeat(3,1fr);border-left:1px solid var(--ink);border-bottom:1px solid var(--ink)}
 .svc-card{border-right:1px solid var(--ink);border-top:1px solid var(--ink);padding:36px 32px;position:relative;overflow:hidden;transition:background .22s;cursor:default}
 .svc-card:hover{background:var(--ink);color:var(--paper)}
 .svc-card::after{content:'';position:absolute;top:0;right:0;width:0;height:3px;background:var(--rust);transition:width .28s ease}
 .svc-card:hover::after{width:100%}
-.svc-ico{font-size:28px;margin-bottom:18px;display:block;transition:transform .2s}
+.svc-ico{font-size:26px;margin-bottom:18px;display:block;transition:transform .2s}
 .svc-card:hover .svc-ico{transform:scale(1.1)}
-/* svc-name: Outfit 800 17px — el nombre del servicio es la línea de venta */
-.svc-name{font-family:var(--sans);font-weight:800;font-size:17px;margin-bottom:9px;line-height:1.2}
-/* svc-desc: 13px .72 — descripción del servicio legible y presente */
-.svc-desc{font-size:13px;line-height:1.82;opacity:.72;margin-bottom:16px;font-family:var(--sans)}
-.svc-card:hover .svc-desc{opacity:.82}
+.svc-name{font-family:var(--sans);font-weight:800;font-size:17px;margin-bottom:9px;line-height:1.15}
+.svc-desc{font-family:var(--body);font-size:13.5px;line-height:1.85;opacity:.74;margin-bottom:16px}
+.svc-card:hover .svc-desc{opacity:.72}
 .svc-examples{padding-top:14px;border-top:1px solid rgba(0,0,0,.1);transition:border-color .2s}
 .svc-card:hover .svc-examples{border-top-color:rgba(255,255,255,.12)}
-/* svc-ex-lbl: 10px sans 600 — label de categoría visible */
-.svc-ex-lbl{font-size:10px;letter-spacing:.12em;text-transform:uppercase;color:var(--rust);margin-bottom:8px;font-family:var(--sans);font-weight:600}
+.svc-ex-lbl{font-size:10px;letter-spacing:.11em;text-transform:uppercase;color:var(--rust);margin-bottom:8px;font-family:var(--sans);font-weight:600}
 .svc-card:hover .svc-ex-lbl{color:var(--amber)}
 .svc-ex-list{display:flex;flex-direction:column;gap:6px}
-/* svc-ex-item: 12px mono — los ejemplos específicos son la prueba de experiencia */
-.svc-ex-item{font-size:12px;opacity:.65;font-family:var(--mono);padding-left:14px;position:relative;line-height:1.55}
-.svc-ex-item::before{content:'→';position:absolute;left:0;color:var(--rust);font-size:10px}
-.svc-card:hover .svc-ex-item{opacity:.75}
+.svc-ex-item{font-size:12px;opacity:.68;font-family:var(--body);padding-left:14px;position:relative;line-height:1.6}
+.svc-ex-item::before{content:'→';position:absolute;left:0;color:var(--rust);font-size:9px}
+.svc-card:hover .svc-ex-item{opacity:.65}
 .svc-card:hover .svc-ex-item::before{color:var(--amber)}
 /* CTA */
 .svc-cta{display:grid;grid-template-columns:1fr auto;border:1px solid var(--ink);background:var(--ink);color:var(--paper)}
 .svc-cta-left{padding:44px 48px;border-right:1px solid rgba(255,255,255,.1)}
 .svc-cta-right{padding:44px 48px;display:flex;flex-direction:column;justify-content:center;gap:16px;min-width:300px}
-/* svc-cta-eyebrow: 10px sans 600 — pre-título del CTA */
-.svc-cta-eyebrow{font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--rust);margin-bottom:12px;font-family:var(--sans);font-weight:600}
-/* svc-cta-title: Playfair 900 — el headline del CTA debe cerrar el deal */
-.svc-cta-title{font-family:var(--serif);font-size:clamp(22px,2.5vw,32px);line-height:1.12;opacity:.95;font-weight:900}
+.svc-cta-eyebrow{font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--rust);margin-bottom:12px;font-family:var(--sans);font-weight:600}
+.svc-cta-title{font-family:var(--serif);font-size:clamp(20px,2.4vw,30px);line-height:1.15;opacity:.95}
 .svc-cta .btn-p{background:var(--paper);color:var(--ink);border-color:var(--paper)}
 .svc-cta .btn-p::before{background:var(--rust)}
 .svc-cta .btn-p:hover{color:var(--paper)}
-/* svc-cta-note: 11px .5 — nota de cierre presente pero discreta */
-.svc-cta-note{font-size:11px;opacity:.5;font-family:var(--mono);line-height:1.75;max-width:260px}
+.svc-cta-note{font-size:11px;opacity:.52;font-family:var(--body);line-height:1.75;max-width:260px}
 .svc-industries{display:grid;grid-template-columns:repeat(4,1fr);border:1px solid var(--ink);border-top:none}
 .svc-ind{padding:22px 24px;border-right:1px solid var(--ink);display:flex;flex-direction:column;gap:4px;transition:background .2s;cursor:default}
 .svc-ind:last-child{border-right:none}
 .svc-ind:hover{background:rgba(200,75,47,.04)}
-.svc-ind-ico{font-size:20px;margin-bottom:4px}
-/* svc-ind-name: Outfit 700 13px — industria legible */
+.svc-ind-ico{font-size:18px;margin-bottom:4px}
 .svc-ind-name{font-family:var(--sans);font-weight:700;font-size:13px}
-/* svc-ind-desc: 11px mono .55 — descripción breve presente */
-.svc-ind-desc{font-size:11px;opacity:.55;font-family:var(--mono);line-height:1.6}
+.svc-ind-desc{font-size:11px;opacity:.58;font-family:var(--body);line-height:1.6}
 
 /* SKILLS */
 #skills{border-top:1px solid var(--ink);display:grid;grid-template-columns:1fr 1fr}
 .sk-left{padding:72px 48px;border-right:1px solid var(--ink)}
 .sk-right{padding:72px 48px}
 .sk-cat{margin-bottom:36px}
-/* sk-cat-lbl: 11px sans 600 — categoría de skill visible */
-.sk-cat-lbl{font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--rust);margin-bottom:14px;font-family:var(--sans);font-weight:600}
+.sk-cat-lbl{font-size:11px;letter-spacing:.11em;text-transform:uppercase;color:var(--rust);margin-bottom:14px;font-family:var(--sans);font-weight:600}
 .sk-bar{margin-bottom:10px}
 .sk-bar-top{display:flex;justify-content:space-between;margin-bottom:5px;font-size:12px}
-/* sk-bar-nm: .8 — el nombre de la skill en las barras debe leerse */
-.sk-bar-nm{opacity:.8}.sk-bar-pct{color:var(--rust);font-weight:600}
+.sk-bar-nm{opacity:.8;font-family:var(--body)}.sk-bar-pct{color:var(--rust);font-weight:600;font-family:var(--sans)}
 .sk-track{height:2px;background:rgba(0,0,0,.09);overflow:hidden}
 .sk-fill{height:100%;background:var(--ink);width:0;transition:width 1.1s ease}
 .sk-fill.animate{width:var(--w)}
@@ -286,49 +241,37 @@ section{position:relative;z-index:2}
 .pr-list{margin-top:36px}
 .pr-item{display:flex;gap:14px;align-items:flex-start;padding:14px 0;border-bottom:1px solid rgba(0,0,0,.07)}
 .pr-item:last-child{border-bottom:none}
-/* pr-n: Playfair 900 26px .45 — número grande como elemento decorativo funcional */
-.pr-n{font-family:var(--serif);font-size:26px;font-weight:900;color:var(--rust);line-height:1;min-width:32px;opacity:.45}
-/* pr-t: 13px sans .75 — los principios son tu filosofía, deben leerse */
-.pr-t{font-size:13px;line-height:1.78;opacity:.75;font-family:var(--sans)}
-.pr-t strong{color:var(--ink);opacity:1;font-weight:700}
+.pr-n{font-family:var(--serif);font-size:26px;color:var(--rust);line-height:1;min-width:32px;opacity:.38}
+.pr-t{font-family:var(--body);font-size:13.5px;line-height:1.82;opacity:.76}
+.pr-t strong{color:var(--ink);opacity:1}
 
 /* CONTACT */
 #contact{border-top:1px solid var(--ink);display:grid;grid-template-columns:1fr 1fr;min-height:55vh}
 .ct-left{padding:72px 48px;border-right:1px solid var(--ink);display:flex;flex-direction:column;justify-content:space-between}
-/* ct-head: Playfair 900 — el cierre del portfolio debe ser el momento más memorable */
-.ct-head{font-family:var(--serif);font-size:clamp(36px,4.2vw,64px);font-weight:900;line-height:1.02;max-width:420px}
+.ct-head{font-family:var(--serif);font-size:clamp(34px,4vw,60px);line-height:1.04;max-width:420px}
 .ct-head em{font-style:italic;color:var(--rust)}
-/* ct-sub: 14px sans .68 — invitación legible y cálida */
-.ct-sub{margin-top:20px;font-size:14px;line-height:1.88;opacity:.68;max-width:380px;font-family:var(--sans)}
+.ct-sub{font-family:var(--body);margin-top:20px;font-size:14px;line-height:1.9;opacity:.72;max-width:380px}
 .ct-links{margin-top:40px;display:flex;flex-direction:column;border:1px solid var(--ink)}
-/* ct-link: 13px mono — los links de contacto son el CTA final, deben verse */
-.ct-link{display:flex;align-items:center;justify-content:space-between;padding:18px 24px;border-bottom:1px solid var(--ink);text-decoration:none;color:var(--ink);font-family:var(--mono);font-size:13px;font-weight:500;letter-spacing:.04em;transition:background .2s,color .2s}
+.ct-link{display:flex;align-items:center;justify-content:space-between;padding:18px 24px;border-bottom:1px solid var(--ink);text-decoration:none;color:var(--ink);font-family:var(--mono);font-size:13px;font-weight:500;letter-spacing:.03em;transition:background .2s,color .2s}
 .ct-link:last-child{border-bottom:none}
 .ct-link:hover{background:var(--ink);color:var(--paper)}
-.ct-arr{opacity:.3;transition:opacity .2s,transform .2s}
+.ct-arr{opacity:.28;transition:opacity .2s,transform .2s}
 .ct-link:hover .ct-arr{opacity:1;transform:translateX(4px)}
 .ct-right{padding:72px 48px;display:flex;flex-direction:column;justify-content:center}
 .loc-blk{display:flex;flex-direction:column;gap:3px;margin-bottom:42px}
-/* loc-lbl: 11px sans 600 — label de ubicación orientador */
-.loc-lbl{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--rust);font-family:var(--sans);font-weight:600}
-/* loc-val: Outfit 700 21px — la ciudad como señal de contexto */
+.loc-lbl{font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--rust);font-family:var(--sans);font-weight:600}
 .loc-val{font-family:var(--sans);font-weight:700;font-size:21px}
-/* loc-sub: 12px .55 — detalle de zona horaria presente */
-.loc-sub{font-size:12px;opacity:.55}
+.loc-sub{font-family:var(--body);font-size:13px;opacity:.55}
 .av-blk{border:1px solid var(--avail);padding:22px;position:relative;overflow:hidden}
 .av-blk::before{content:'';position:absolute;top:0;left:0;width:4px;height:100%;background:var(--avail)}
-/* av-lbl: 11px sans 600 — el estado de disponibilidad es crítico, debe verse */
-.av-lbl{font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--avail);margin-bottom:7px;font-family:var(--sans);font-weight:600}
-/* av-txt: 14px .78 — el texto de disponibilidad es la conversión final */
-.av-txt{font-size:14px;line-height:1.8;opacity:.78;font-family:var(--sans)}
-.av-txt strong{color:var(--ink);opacity:1;font-weight:700}
+.av-lbl{font-size:11px;letter-spacing:.11em;text-transform:uppercase;color:var(--avail);margin-bottom:7px;font-family:var(--sans);font-weight:600}
+.av-txt{font-family:var(--body);font-size:14px;line-height:1.82;opacity:.78}
+.av-txt strong{color:var(--ink);opacity:1}
 .pref-blk{margin-top:28px;padding:22px;border:1px solid var(--ink)}
-/* pref-lbl: 11px sans 600 — label de preferencias */
-.pref-lbl{font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--rust);margin-bottom:10px;font-family:var(--sans);font-weight:600}
+.pref-lbl{font-size:11px;letter-spacing:.11em;text-transform:uppercase;color:var(--rust);margin-bottom:10px;font-family:var(--sans);font-weight:600}
 .pref-tags{display:flex;flex-wrap:wrap;gap:7px}
 
-/* footer: 11px sans .5 — presente pero no compite */
-footer{position:relative;z-index:2;border-top:1px solid var(--ink);padding:20px 48px;display:flex;align-items:center;justify-content:space-between;font-size:11px;letter-spacing:.08em;opacity:.5;font-family:var(--sans)}
+footer{position:relative;z-index:2;border-top:1px solid var(--ink);padding:20px 48px;display:flex;align-items:center;justify-content:space-between;font-size:11px;letter-spacing:.07em;opacity:.48;font-family:var(--body)}
 
 /* FADE-UP */
 .fu{opacity:0;transform:translateY(20px);transition:opacity .6s ease,transform .6s ease}
@@ -787,7 +730,7 @@ footer{position:relative;z-index:2;border-top:1px solid var(--ink);padding:20px 
       <h3 class="svc-cta-title en">Got a project in mind? Tell me the problem — I'll give you an honest diagnosis and a concrete proposal.</h3>
     </div>
     <div class="svc-cta-right">
-      <a href="/cdn-cgi/l/email-protection#3d595c4b545950524f5853524f584e5853595847544e4f5c58517d5a505c5451135e5250" class="btn-p">
+      <a href="/cdn-cgi/l/email-protection#a4c0c5d2cdc0c9cbd6c1cacbd6c1d7c1cac0c1decdd7d6c5c1c8e4c3c9c5cdc88ac7cbc9" class="btn-p">
         <span class="es">Cuéntame tu problema</span><span class="en">Tell me your problem</span><span> →</span>
       </a>
       <p class="svc-cta-note es">Sin compromisos. Sin plantillas. Solo una conversación técnica honesta.</p>
@@ -849,7 +792,7 @@ footer{position:relative;z-index:2;border-top:1px solid var(--ink);padding:20px 
       <p class="ct-sub en">Actively seeking senior / architect-level remote international roles. If you're building something complex and need someone who will push back when needed — let's talk.</p>
     </div>
     <div class="ct-links">
-      <a href="/cdn-cgi/l/email-protection#fc989d8a959891938e9992938e998f9992989986958f8e9d9990bc9b919d9590d29f9391" class="ct-link"><span>✉ <span class="__cf_email__" data-cfemail="88ece9fee1ece5e7faede6e7faedfbede6ecedf2e1fbfae9ede4c8efe5e9e1e4a6ebe7e5">[email&#160;protected]</span></span><span class="ct-arr">→</span></a>
+      <a href="/cdn-cgi/l/email-protection#4f2b2e39262b22203d2a21203d2a3c2a212b2a35263c3d2e2a230f28222e2623612c2022" class="ct-link"><span>✉ <span class="__cf_email__" data-cfemail="9cf8fdeaf5f8f1f3eef9f2f3eef9eff9f2f8f9e6f5efeefdf9f0dcfbf1fdf5f0b2fff3f1">[email&#160;protected]</span></span><span class="ct-arr">→</span></a>
       <a href="https://www.linkedin.com/in/david-israel-moreno-resendez/" target="_blank" class="ct-link"><span>⌘ /in/david-israel-moreno-resendez</span><span class="ct-arr">→</span></a>
       <a href="https://github.com/CHINOBv" target="_blank" class="ct-link"><span>⌥ github.com/CHINOBv</span><span class="ct-arr">→</span></a>
     </div>
@@ -975,25 +918,19 @@ document.querySelectorAll('.tf-btn').forEach(btn => {
   });
 });
 
-// HERO ENTRANCE — stagger fade-in on load
+// HERO ENTRANCE — stagger + immediate visibility fix
 (function() {
-  // Immediately show all .fu elements that are already in viewport on load
-  // AND kick off counters — fixes the "0" bug when opening as local file
   function initVisible() {
     document.querySelectorAll('.fu').forEach(el => {
       const r = el.getBoundingClientRect();
       if (r.top < window.innerHeight) el.classList.add('vis');
     });
-    // Always run counters on load (threshold .4 on hero can fail in local files)
     animCtrs();
-    // Animate skill bars if skills section is visible
     document.querySelectorAll('.sk-fill').forEach(b => {
       const r = b.getBoundingClientRect();
       if (r.top < window.innerHeight) b.classList.add('animate');
     });
   }
-
-  // Hero left children stagger
   const hLeft = document.querySelector('.h-left');
   if (hLeft) {
     const kids = [...hLeft.children];
@@ -1003,21 +940,16 @@ document.querySelectorAll('.tf-btn').forEach(btn => {
       el.style.transition = 'opacity .55s ease, transform .55s ease';
       el.style.transitionDelay = (i * 0.09) + 's';
     });
-    requestAnimationFrame(() => {
-      kids.forEach(el => {
-        el.style.opacity = '';
-        el.style.transform = '';
-      });
-    });
+    requestAnimationFrame(() => kids.forEach(el => {
+      el.style.opacity = '';
+      el.style.transform = '';
+    }));
   }
-
-  // Run on DOMContentLoaded
   if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', initVisible);
   } else {
     initVisible();
   }
-  // Also run after full load (images etc.)
   window.addEventListener('load', initVisible);
 })();
 </script>
