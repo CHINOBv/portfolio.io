@@ -4,21 +4,25 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>David Israel Moreno — Arquitecto de Software [W]</title>
+<link rel="canonical" href="https://chinobv.github.io/portfolio.io/">
 
 <!-- Open Graph / LinkedIn / WhatsApp -->
 <meta property="og:type" content="website">
-<meta property="og:url" content="https://davidisrael.dev/">
+<meta property="og:url" content="https://chinobv.github.io/portfolio.io/">
 <meta property="og:title" content="David Israel Moreno — Software Architect & Senior Full-Stack">
 <meta property="og:description" content="Diseño sistemas distribuidos, microservicios event-driven e integraciones de pago STP/SPEI. Monterrey, México. Disponible para roles remotos internacionales.">
-<meta property="og:image" content="https://davidisrael.dev/og-preview.png">
+<meta property="og:image" content="https://chinobv.github.io/portfolio.io/og-preview.png">
+<meta property="og:image:alt" content="David Israel Moreno, Software Architect specializing in event-driven systems, DDD, fintech, and logistics.">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:locale" content="es_MX">
 <meta property="og:site_name" content="David Israel Moreno">
 <meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:url" content="https://chinobv.github.io/portfolio.io/">
 <meta name="twitter:title" content="David Israel Moreno — Software Architect">
 <meta name="twitter:description" content="Senior Full-Stack & Arquitecto de Software. DDD, CQRS, microservicios, STP/SPEI. Monterrey, México.">
-<meta name="twitter:image" content="https://davidisrael.dev/og-preview.png">
+<meta name="twitter:image" content="https://chinobv.github.io/portfolio.io/og-preview.png">
+<meta name="twitter:image:alt" content="David Israel Moreno, Software Architect specializing in event-driven systems, DDD, fintech, and logistics.">
 <meta name="description" content="David Israel Moreno Resendez — Arquitecto de Software y Senior Full-Stack Engineer en Monterrey, México. Especialista en sistemas distribuidos, DDD, CQRS, microservicios e integraciones STP/SPEI.">
 <meta name="author" content="David Israel Moreno Resendez">
 
@@ -214,6 +218,7 @@ section{position:relative;z-index:2}
 .svc-cta-eyebrow{font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--rust);margin-bottom:12px;font-family:var(--sans);font-weight:600}
 .svc-cta-title{font-family:var(--serif);font-size:clamp(20px,2.4vw,30px);line-height:1.15;opacity:.95}
 .svc-cta .btn-p{background:var(--paper);color:var(--ink);border-color:var(--paper)}
+.svc-cta .email-address{text-transform:none;overflow-wrap:anywhere}
 .svc-cta .btn-p::before{background:var(--rust)}
 .svc-cta .btn-p:hover{color:var(--paper)}
 .svc-cta-note{font-size:11px;opacity:.52;font-family:var(--body);line-height:1.75;max-width:260px}
@@ -313,6 +318,19 @@ footer{position:relative;z-index:2;border-top:1px solid var(--ink);padding:20px 
   .ct-right{padding:44px 20px}
   footer{padding:14px 20px;flex-direction:column;gap:6px;text-align:center}
 }
+
+@media (hover:none), (pointer:coarse) {
+  body,.lbtn,.tf-btn{cursor:auto}
+  #cur,#cur-r{display:none}
+}
+
+@media (prefers-reduced-motion:reduce) {
+  html{scroll-behavior:auto}
+  *,*::before,*::after{animation:none!important;transition:none!important}
+  body,.lbtn,.tf-btn{cursor:auto}
+  #cur,#cur-r{display:none}
+  .fu{opacity:1;transform:none}
+}
 </style>
 </head>
 <body class="lang-es" id="body">
@@ -333,7 +351,7 @@ footer{position:relative;z-index:2;border-top:1px solid var(--ink);padding:20px 
   </ul>
   <div class="n-right">
     <div class="n-av"><span class="sdot"></span><span class="es">Disponible</span><span class="en">Available</span></div>
-    <button class="lbtn" onclick="toggleLang()"><span id="lf">🇺🇸</span><span id="ll">EN</span></button>
+    <button type="button" class="lbtn" aria-label="Cambiar a inglés" onclick="toggleLang()"><span id="lf">🇺🇸</span><span id="ll">EN</span></button>
   </div>
 </nav>
 
@@ -500,7 +518,7 @@ footer{position:relative;z-index:2;border-top:1px solid var(--ink);padding:20px 
       <p class="p-desc es">Sistema completo de gestión financiera y transporte. Event-driven con Wolverine, DDD, Arquitectura Hexagonal, ecosistema multi-agente IA y rieles de pago STP/SPEI para el sistema bancario mexicano.</p>
       <p class="p-desc en">Full financial & transportation management system. Event-driven with Wolverine, DDD, Hexagonal Architecture, multi-agent AI ecosystem, and STP/SPEI payment rails for the Mexican banking system.</p>
       <div class="p-tags"><span class="p-tag">.NET 8</span><span class="p-tag">CQRS</span><span class="p-tag">Wolverine</span><span class="p-tag">GCP</span><span class="p-tag">STP/SPEI</span></div>
-      <a href="https://github.com/CHINOBv" target="_blank" class="p-link">GitHub →</a>
+      <a href="https://github.com/CHINOBv" target="_blank" rel="noopener noreferrer" class="p-link">GitHub →</a>
     </div>
 
     <div class="proj-card fu">
@@ -510,7 +528,7 @@ footer{position:relative;z-index:2;border-top:1px solid var(--ink);padding:20px 
       <p class="p-desc es">Lideré la transformación arquitectónica completa en Grupo Directo Express. Estrategia del event bus, bounded contexts con DDD y despliegue en GCP Cloud Run.</p>
       <p class="p-desc en">Led the full architectural transformation at Grupo Directo Express. Event bus strategy, DDD bounded contexts, and deployment on GCP Cloud Run.</p>
       <div class="p-tags"><span class="p-tag">Microservices</span><span class="p-tag">DDD</span><span class="p-tag">Event Bus</span><span class="p-tag">Cloud Run</span></div>
-      <a href="https://github.com/CHINOBv" target="_blank" class="p-link">Case study →</a>
+      <a href="https://github.com/CHINOBv" target="_blank" rel="noopener noreferrer" class="p-link">Case study →</a>
     </div>
 
     <div class="proj-card fu">
@@ -519,7 +537,7 @@ footer{position:relative;z-index:2;border-top:1px solid var(--ink);padding:20px 
       <p class="p-desc es">Rastreo GPS en tiempo real con alertas de geocercas y mensajería topic-based en Azure Service Bus para gestión de flota logística.</p>
       <p class="p-desc en">Real-time GPS tracking with geofence alerts and topic-based messaging on Azure Service Bus for logistics fleet management.</p>
       <div class="p-tags"><span class="p-tag">Azure</span><span class="p-tag">Service Bus</span><span class="p-tag">Geofencing</span><span class="p-tag">Real-time</span></div>
-      <a href="https://github.com/CHINOBv" target="_blank" class="p-link"><span class="es">Ver proyecto</span><span class="en">View project</span> →</a>
+      <a href="https://github.com/CHINOBv" target="_blank" rel="noopener noreferrer" class="p-link"><span class="es">Ver proyecto</span><span class="en">View project</span> →</a>
     </div>
 
     <div class="proj-card fu">
@@ -529,7 +547,7 @@ footer{position:relative;z-index:2;border-top:1px solid var(--ink);padding:20px 
       <p class="p-desc es">Sistema de detección automática de entradas y salidas de tractos usando visión computacional y OCR. Identifica placas, clasifica vehículos y registra movimientos de la flota en tiempo real sin intervención humana.</p>
       <p class="p-desc en">Automated truck entry/exit detection using computer vision and OCR. Identifies license plates, classifies vehicles, and logs fleet movements in real time with zero human intervention.</p>
       <div class="p-tags"><span class="p-tag">Computer Vision</span><span class="p-tag">OCR</span><span class="p-tag">Python</span><span class="p-tag">OpenCV</span><span class="p-tag">Real-time</span></div>
-      <a href="https://github.com/CHINOBv" target="_blank" class="p-link"><span class="es">Ver en GitHub</span><span class="en">View on GitHub</span> →</a>
+      <a href="https://github.com/CHINOBv" target="_blank" rel="noopener noreferrer" class="p-link"><span class="es">Ver en GitHub</span><span class="en">View on GitHub</span> →</a>
     </div>
 
   </div>
@@ -730,8 +748,8 @@ footer{position:relative;z-index:2;border-top:1px solid var(--ink);padding:20px 
       <h3 class="svc-cta-title en">Got a project in mind? Tell me the problem — I'll give you an honest diagnosis and a concrete proposal.</h3>
     </div>
     <div class="svc-cta-right">
-      <a href="/cdn-cgi/l/email-protection#a4c0c5d2cdc0c9cbd6c1cacbd6c1d7c1cac0c1decdd7d6c5c1c8e4c3c9c5cdc88ac7cbc9" class="btn-p">
-        <span class="es">Cuéntame tu problema</span><span class="en">Tell me your problem</span><span> →</span>
+      <a href="mailto:davidmorenoresendezisrael@gmail.com" class="btn-p">
+        <span class="email-address">davidmorenoresendezisrael@gmail.com</span><span> →</span>
       </a>
       <p class="svc-cta-note es">Sin compromisos. Sin plantillas. Solo una conversación técnica honesta.</p>
       <p class="svc-cta-note en">No commitments. No templates. Just an honest technical conversation.</p>
@@ -792,9 +810,9 @@ footer{position:relative;z-index:2;border-top:1px solid var(--ink);padding:20px 
       <p class="ct-sub en">Actively seeking senior / architect-level remote international roles. If you're building something complex and need someone who will push back when needed — let's talk.</p>
     </div>
     <div class="ct-links">
-      <a href="/cdn-cgi/l/email-protection#4f2b2e39262b22203d2a21203d2a3c2a212b2a35263c3d2e2a230f28222e2623612c2022" class="ct-link"><span>✉ <span class="__cf_email__" data-cfemail="9cf8fdeaf5f8f1f3eef9f2f3eef9eff9f2f8f9e6f5efeefdf9f0dcfbf1fdf5f0b2fff3f1">[email&#160;protected]</span></span><span class="ct-arr">→</span></a>
-      <a href="https://www.linkedin.com/in/david-israel-moreno-resendez/" target="_blank" class="ct-link"><span>⌘ /in/david-israel-moreno-resendez</span><span class="ct-arr">→</span></a>
-      <a href="https://github.com/CHINOBv" target="_blank" class="ct-link"><span>⌥ github.com/CHINOBv</span><span class="ct-arr">→</span></a>
+      <a href="mailto:davidmorenoresendezisrael@gmail.com" class="ct-link"><span>✉ davidmorenoresendezisrael@gmail.com</span><span class="ct-arr">→</span></a>
+      <a href="https://www.linkedin.com/in/david-israel-moreno-resendez/" target="_blank" rel="noopener noreferrer" class="ct-link"><span>⌘ /in/david-israel-moreno-resendez</span><span class="ct-arr">→</span></a>
+      <a href="https://github.com/CHINOBv" target="_blank" rel="noopener noreferrer" class="ct-link"><span>⌥ github.com/CHINOBv</span><span class="ct-arr">→</span></a>
     </div>
   </div>
   <div class="ct-right">
@@ -818,13 +836,13 @@ footer{position:relative;z-index:2;border-top:1px solid var(--ink);padding:20px 
 </main>
 
 <footer>
-  <span>David Israel Moreno Resendez © 2025</span>
+  <span>David Israel Moreno Resendez © <span id="footer-year"></span></span>
   <span class="es">Diseñado desde cero — Monterrey, México</span>
   <span class="en">Designed from scratch — Monterrey, México</span>
   <span>v5.0.0</span>
 </footer>
 
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+<script>
 // LANG — toggle class on body, CSS does the rest
 let lang = 'es';
 function toggleLang() {
@@ -833,6 +851,7 @@ function toggleLang() {
   document.documentElement.lang = lang;
   document.getElementById('lf').textContent = lang === 'es' ? '🇺🇸' : '🇲🇽';
   document.getElementById('ll').textContent = lang === 'es' ? 'EN' : 'ES';
+  document.querySelector('.lbtn').setAttribute('aria-label', lang === 'es' ? 'Cambiar a inglés' : 'Switch to Spanish');
   document.title = lang === 'es'
     ? 'David Israel Moreno — Arquitecto de Software'
     : 'David Israel Moreno — Software Architect';
@@ -840,13 +859,19 @@ function toggleLang() {
 
 // CURSOR
 const cur = document.getElementById('cur'), curR = document.getElementById('cur-r');
-let mx=0, my=0, rx=0, ry=0;
-document.addEventListener('mousemove', e => { mx=e.clientX; my=e.clientY; cur.style.left=mx+'px'; cur.style.top=my+'px'; });
-(function loop(){ rx+=(mx-rx)*.11; ry+=(my-ry)*.11; curR.style.left=rx+'px'; curR.style.top=ry+'px'; requestAnimationFrame(loop); })();
-document.querySelectorAll('a,button,.exp-row,.proj-card,.tag,.ct-link,.t-item,.svc-card').forEach(el => {
-  el.addEventListener('mouseenter', () => { cur.style.width='22px'; cur.style.height='22px'; curR.style.width='52px'; curR.style.height='52px'; curR.style.opacity='.25'; });
-  el.addEventListener('mouseleave', () => { cur.style.width='11px'; cur.style.height='11px'; curR.style.width='32px'; curR.style.height='32px'; curR.style.opacity='.45'; });
-});
+const reducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+const useCustomCursor = window.matchMedia('(hover: hover) and (pointer: fine)').matches && !reducedMotion;
+if (useCustomCursor) {
+  let mx=0, my=0, rx=0, ry=0;
+  document.addEventListener('mousemove', e => { mx=e.clientX; my=e.clientY; cur.style.left=mx+'px'; cur.style.top=my+'px'; });
+  (function loop(){ rx+=(mx-rx)*.11; ry+=(my-ry)*.11; curR.style.left=rx+'px'; curR.style.top=ry+'px'; requestAnimationFrame(loop); })();
+  document.querySelectorAll('a,button,.exp-row,.proj-card,.tag,.ct-link,.t-item,.svc-card').forEach(el => {
+    el.addEventListener('mouseenter', () => { cur.style.width='22px'; cur.style.height='22px'; curR.style.width='52px'; curR.style.height='52px'; curR.style.opacity='.25'; });
+    el.addEventListener('mouseleave', () => { cur.style.width='11px'; cur.style.height='11px'; curR.style.width='32px'; curR.style.height='32px'; curR.style.opacity='.45'; });
+  });
+}
+
+document.getElementById('footer-year').textContent = new Date().getFullYear();
 
 // NAV SCROLL
 window.addEventListener('scroll', () => document.getElementById('nav').classList.toggle('sc', scrollY > 50));
@@ -879,19 +904,24 @@ setTimeout(() => {
     ln.setAttribute('x1',na.cx); ln.setAttribute('y1',na.cy); ln.setAttribute('x2',nb.cx); ln.setAttribute('y2',nb.cy);
     ln.setAttribute('stroke','#0a0a0f'); ln.setAttribute('stroke-width','1'); ln.setAttribute('stroke-opacity','.2'); ln.setAttribute('stroke-dasharray','3 4');
     svgEl.appendChild(ln);
-    const c = document.createElementNS('http://www.w3.org/2000/svg','circle');
-    c.setAttribute('r','2.5'); c.setAttribute('fill','#c84b2f');
-    const am = document.createElementNS('http://www.w3.org/2000/svg','animateMotion');
-    am.setAttribute('dur',(1.6+Math.random()*1.8)+'s'); am.setAttribute('repeatCount','indefinite');
-    am.setAttribute('path',`M${na.cx},${na.cy} L${nb.cx},${nb.cy}`);
-    c.appendChild(am); svgEl.appendChild(c);
+    if (!reducedMotion) {
+      const c = document.createElementNS('http://www.w3.org/2000/svg','circle');
+      c.setAttribute('r','2.5'); c.setAttribute('fill','#c84b2f');
+      const am = document.createElementNS('http://www.w3.org/2000/svg','animateMotion');
+      am.setAttribute('dur',(1.6+Math.random()*1.8)+'s'); am.setAttribute('repeatCount','indefinite');
+      am.setAttribute('path',`M${na.cx},${na.cy} L${nb.cx},${nb.cy}`);
+      c.appendChild(am); svgEl.appendChild(c);
+    }
   });
 }, 120);
 
 // COUNTERS
 function animCtrs() {
   document.querySelectorAll('[data-count]').forEach(el => {
+    if (el.dataset.animated) return;
+    el.dataset.animated = 'true';
     const t = parseInt(el.dataset.count); let c = 0;
+    if (reducedMotion) { el.textContent = t + '+'; return; }
     const iv = setInterval(() => { c+=t/40; if(c>=t){c=t;clearInterval(iv);} el.textContent=Math.floor(c)+'+'; }, 28);
   });
 }
@@ -904,7 +934,10 @@ const obs = new IntersectionObserver(entries => entries.forEach(e => {
   }
 }), {threshold: .1});
 document.querySelectorAll('.fu').forEach(el => obs.observe(el));
-new IntersectionObserver(entries => entries.forEach(e => { if(e.isIntersecting) animCtrs(); }), {threshold:.4}).observe(document.getElementById('hero'));
+const counterObs = new IntersectionObserver(entries => entries.forEach(e => {
+  if (e.isIntersecting) { animCtrs(); counterObs.unobserve(e.target); }
+}), {threshold:.4});
+counterObs.observe(document.getElementById('hero'));
 
 // TECH FILTER
 document.querySelectorAll('.tf-btn').forEach(btn => {
